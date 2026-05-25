@@ -1,56 +1,62 @@
-Founding Recruiter Playbook — Building from 0→1
-For: First in-house recruiters, founding recruiting hires, early TA leads at seed to Series B startups
-Maintained by: Chandra Buduri · linkedin.com/in/chandrabuduri
+# Founding Recruiter Playbook — Building from 0→1
 
-This is the playbook I build at every engagement. It's designed for the reality of early-stage companies: no process, no pipeline, urgent roles, and a founding team that's never hired at scale. Everything here is field-tested across 15+ startups from seed through Series D.
+**For:** First in-house recruiters, founding recruiting hires, early TA leads at seed to Series B startups  
+**Maintained by:** Chandra Buduri · [linkedin.com/in/chandrabuduri](https://linkedin.com/in/chandrabuduri)
 
+> This is the playbook I build at every engagement. It's designed for the reality of early-stage companies: no process, no pipeline, urgent roles, and a founding team that's never hired at scale. Everything here is field-tested across 15+ startups from seed through Series D.
 
-The Founding Recruiter Mandate
+---
+
+## The Founding Recruiter Mandate
+
 Being the first recruiter is not the same as being a recruiter at a company that already has recruiting. The job is different in kind, not just in scale.
-You are simultaneously:
 
-The sourcer, screener, coordinator, closer, and onboarder
-The person who builds the infrastructure that outlasts you
-The talent advisor who shapes how the founders think about hiring
-The culture carrier who decides what "good" looks like before anyone else does
+You are simultaneously:
+- The sourcer, screener, coordinator, closer, and onboarder
+- The person who builds the infrastructure that outlasts you
+- The talent advisor who shapes how the founders think about hiring
+- The culture carrier who decides what "good" looks like before anyone else does
 
 The failure mode is spending all your time filling reqs and none building systems. Six months in, you're still running the same manual process on every search. The goal is to build infrastructure fast enough that each hire gets easier — not harder — than the last.
 
-Week 1–2: Discovery & Audit
+---
+
+## Step 1 — Discovery & Audit (Week 1–2)
+
 Before sourcing a single candidate, understand the company deeply enough to represent it authentically.
-Founder / CEO intake (1:1, 60 min)
-Questions to ask:
-On the business:
 
-What does the company do, and what's the 18-month vision?
-What's the current headcount and what does it need to be in 12 months?
-What are the 3 most critical hires right now — and why those three?
-What's broken without them?
+### Founder / CEO Intake (60 min, 1:1)
 
-On hiring history:
+**On the business:**
+- What does the company do, and what's the 18-month vision?
+- What's the current headcount and what does it need to be in 12 months?
+- What are the 3 most critical hires right now — and why those three?
+- What's broken without them?
 
-Who have you hired that you'd clone? What made them exceptional?
-Who didn't work out, and what did you learn?
-Have you worked with recruiters before? What worked, what didn't?
+**On hiring history:**
+- Who have you hired that you'd clone? What made them exceptional?
+- Who didn't work out, and what did you learn?
+- Have you worked with recruiters before? What worked, what didn't?
 
-On culture:
+**On culture:**
+- How do you describe the way people work here?
+- What kind of person fails here?
+- What's a non-negotiable value you'd turn down a strong candidate over?
 
-How do you describe the way people work here?
-What kind of person fails here?
-What's a non-negotiable value you'd turn down a strong candidate over?
+**On compensation:**
+- What's the approved comp range for priority roles?
+- What's the equity philosophy — how do you think about option grants?
+- Are there any constraints (visa sponsorship, remote, relocation)?
 
-On compensation:
+### Hiring Manager Intake (45 min, per role)
 
-What's the approved comp range for priority roles?
-What's the equity philosophy — how do you think about option grants?
-Are there any constraints (visa sponsorship, remote, relocation)?
+Run this before writing a JD or sourcing a single profile:
 
-Hiring manager intake (per role, 45 min)
-For every open role, run a structured intake before writing a JD or sourcing a single profile:
+```
 Role: _______________
 Level: _______________
 Team size this person joins: _______________
-Who they report to: _______________
+Reports to: _______________
 
 Must-haves (true dealbreakers):
 1.
@@ -62,125 +68,135 @@ Nice-to-haves (preferences, not filters):
 2.
 3.
 
-What does the first 90 days look like for this person?
-
+What does the first 90 days look like?
 What does success look like at 6 months? 12 months?
-
-Who is the strongest person you've ever seen do this job? What made them exceptional?
-
+Who is the strongest person you've seen do this job? What made them exceptional?
 Where have you looked already? What hasn't worked?
-
-Interview process you want to run (stages, interviewers, format):
-
+Interview process (stages, interviewers, format):
 Target start date:
-Audit what exists
-Before building anything, check what's already there:
+```
 
- Is there an ATS? If so, what's in it?
- Are there any job descriptions? Any scorecards?
- Is there a careers page? What does it say?
- What's the current hiring process — how are candidates being tracked?
- Are there any agency relationships or retainers in place?
- What's the current offer letter and onboarding process?
+### Audit What Exists
 
-Document what exists, what's broken, and what needs to be built. Present findings to the CEO or Head of People in week 2.
+Before building anything, document what's already there:
 
-Week 2–4: Infrastructure Build
+- [ ] Is there an ATS? If so, what's in it?
+- [ ] Are there any job descriptions? Any scorecards?
+- [ ] Is there a careers page?
+- [ ] How are candidates currently being tracked?
+- [ ] Are there any agency relationships or retainers?
+- [ ] What does the current offer letter and onboarding process look like?
+
+Present findings to the CEO or Head of People in week 2.
+
+---
+
+## Step 2 — Infrastructure Build (Week 2–4)
+
 Build the minimum viable recruiting stack. Don't over-engineer — build what you need for the next 6 months, not the next 3 years.
-ATS Selection
-For most early-stage companies (under 100 people), the right choice is one of three:
-ATSBest forKey strengthAshbySeed–Series B, technical foundersBest analytics, modern UI, strong automationGreenhouseSeries B+, investor-recommendedMost integrations, industry standard, scalableLeverSeries A–C, CRM-first orgsStrong nurture/CRM features, good reporting
+
+### ATS Selection
+
+| ATS | Best for | Key strength |
+|---|---|---|
+| **Ashby** | Seed–Series B, technical founders | Best analytics, modern UI, strong automation |
+| **Greenhouse** | Series B+, investor-recommended | Most integrations, industry standard, scalable |
+| **Lever** | Series A–C, CRM-first orgs | Strong nurture/CRM features, good reporting |
+
 Avoid: Workable (limited for technical roles), JazzHR (too basic), Workday (enterprise overhead at wrong stage).
-Setup checklist:
 
- Configure job stages (Applied → Recruiter Screen → HM Screen → Technical → Onsite → Offer → Hired)
- Build custom rejection reasons (reviewable, not hired, withdrew, duplicate)
- Set up email templates (application confirmation, rejection, interview scheduling)
- Connect to careers page
- Set up Slack or email notifications for hiring managers
- Configure reporting: pipeline velocity, conversion rates, time-in-stage, source tracking
+**ATS setup checklist:**
+- [ ] Configure job stages: Applied → Recruiter Screen → HM Screen → Technical → Onsite → Offer → Hired
+- [ ] Build custom rejection reasons (reviewable, not hired, withdrew, duplicate)
+- [ ] Set up email templates (application confirmation, rejection, interview scheduling)
+- [ ] Connect to careers page
+- [ ] Set up Slack or email notifications for hiring managers
+- [ ] Configure reporting: pipeline velocity, conversion rates, time-in-stage, source tracking
 
-Job Description Templates
-Every JD should follow this structure:
-markdown## [Role Title] — [Company Name]
+### Job Description Template
+
+```markdown
+## [Role Title] — [Company Name]
 
 **About [Company]**
-2–3 sentences. What do you do, why does it matter, what stage are you at.
-Avoid: "We are a fast-growing startup." Be specific.
+2–3 sentences. What you do, why it matters, what stage you're at.
+Avoid: "We're a fast-growing startup." Be specific.
 
 **The role**
-What will this person actually do? Write it in second person ("You will...").
+What will this person actually do? Write in second person ("You will...").
 Be honest about what's hard. Early-stage candidates respect candor.
 
 **What you'll do**
-- 4–6 bullets. Outcomes, not tasks.
-- Bad: "Attend team meetings and contribute to discussions"
-- Good: "Own the design and implementation of our real-time inference pipeline"
+4–6 outcome-oriented bullets.
+Bad: "Attend team meetings and contribute"
+Good: "Own the design and implementation of our real-time inference pipeline"
 
 **What we're looking for**
-Must-haves only. 3–5 bullets maximum.
-Separate must-haves from nice-to-haves explicitly.
+Must-haves only — 3–5 bullets maximum.
+If you'd still interview someone without it, it's not a must-have.
 
 **Nice to have**
-2–3 bullets. Genuine preferences, not disguised requirements.
+2–3 genuine preferences, not disguised requirements.
 
-**What we offer**
-- Salary range: $X–$Y (be transparent — it increases applicant quality)
-- Equity: X%–Y% (or X,000–Y,000 options)
+**Compensation**
+- Salary: $X–$Y (be transparent)
+- Equity: X–Y options
 - Benefits: [list]
 - Remote/hybrid/onsite policy
-JD hygiene rules:
 
-No "rockstar", "ninja", "guru", or "passionate"
-No "X+ years of experience" unless legally required — use level descriptors instead
-No requirements that are actually nice-to-haves dressed up as requirements
-No laundry lists — if you have 20 bullets, you haven't prioritized
-Run every JD through a bias checker before posting (gendered language, credential inflation, unnecessary degree requirements)
+**Interview process**
+[List stages and timeline — candidates value this]
+```
 
-Interview Loop Design
-Design the loop before you start sourcing. A loop that doesn't exist when the first candidate arrives creates chaos and damages candidate experience.
-Standard technical loop (IC roles):
+**JD hygiene rules:**
+- No "rockstar," "ninja," "guru," or "passionate"
+- No "X+ years" unless legally required — use level descriptors
+- No laundry lists — 20 bullets means you haven't prioritized
+- Run every JD through a bias checker before posting
+
+### Interview Loop Design
+
+Design the loop before sourcing begins. A loop that doesn't exist when the first candidate arrives creates chaos.
+
+**Standard technical loop (IC roles):**
+
+```
 Stage 1: Recruiter Screen (30 min)
   → Purpose: Sell the role, assess baseline fit, check logistics
-  → Outcomes: Pass / No Pass / Hold
+  → Output: Pass / No Pass / Hold
 
 Stage 2: Hiring Manager Screen (45–60 min)
   → Purpose: Technical depth, experience validation, culture signal
-  → Outcomes: Pass / No Pass
+  → Output: Pass / No Pass
 
-Stage 3: Technical Assessment (async or live, 60–90 min)
-  → Purpose: Verify technical skills claimed
-  → Format: Take-home OR live coding OR system design (choose one, not all)
-  → Outcomes: Pass / No Pass / Borderline (discuss)
+Stage 3: Technical Assessment (60–90 min)
+  → Format: Take-home OR live coding OR system design (one, not all)
+  → Output: Pass / No Pass / Borderline
 
 Stage 4: Onsite / Virtual Onsite (3–4 hours)
-  → Structure:
-     - Deep technical (60 min) — assigned interviewer with scorecard
-     - System design / architecture (60 min) — assigned interviewer with scorecard
-     - Cross-functional / working style (45 min) — peer or stakeholder
-     - Founder / exec (30 min) — culture, vision alignment, close
-  → Outcomes: Hire / No Hire / Strong Hire
+  → Deep technical (60 min)
+  → System design / architecture (60 min)
+  → Cross-functional / working style (45 min)
+  → Founder / exec (30 min)
+  → Output: Strong Hire / Hire / No Hire / Strong No Hire
 
 Stage 5: Reference Checks (before offer)
-  → Minimum 2 references: 1 manager, 1 peer
+  → Minimum 2: 1 manager, 1 peer
   → Ask behavioral questions, not just "would you rehire"
-Rules:
+```
 
-Every stage must have a defined owner and a scorecard
-No "let's just chat" interviews — every conversation has a stated purpose
-No more than 5 business days between stages (candidates read slow process as disinterest)
-Debrief immediately after onsite — within 24 hours while feedback is fresh
+**Rules:**
+- Every stage must have a defined owner and a scorecard
+- No "let's just chat" interviews — every conversation has a stated purpose
+- No more than 5 business days between stages
+- Debrief within 24 hours of onsite while feedback is fresh
 
-Scorecard Templates
-A scorecard is not a form to fill out after the fact. It's a pre-defined list of signals you're looking for, agreed upon before the first candidate is screened.
-Structure:
-markdown## [Role] Interview Scorecard — [Stage]
+### Scorecard Template
 
-**Interviewer:** _______________
-**Candidate:** _______________
-**Date:** _______________
+```markdown
+## [Role] Interview Scorecard — [Stage]
 
-### Competencies to Assess
+Interviewer: _______________ | Candidate: _______________ | Date: _______________
 
 | Competency | Weight | Score (1–4) | Evidence / Notes |
 |---|---|---|---|
@@ -190,218 +206,253 @@ markdown## [Role] Interview Scorecard — [Stage]
 | [Culture signal] | Medium | | |
 | [Communication] | Low | | |
 
-**Scoring:**
-- 4 = Strong Hire signal — exceptional, would advocate strongly
+Scoring:
+- 4 = Strong Hire — exceptional, would advocate strongly
 - 3 = Hire — meets bar, no significant concerns
 - 2 = No Hire — below bar on one or more weighted competencies
 - 1 = Strong No Hire — significant concerns
 
-**Overall recommendation:** Strong Hire / Hire / No Hire / Strong No Hire
+Overall: Strong Hire / Hire / No Hire / Strong No Hire
 
-**Top strength:**
+Top strength:
+Primary concern:
+Questions for debrief:
+```
 
-**Primary concern:**
+Run a calibration session with all interviewers before the first candidate screens. Align on what a 4 looks like vs. a 3. Surface disagreements before they affect a real candidate.
 
-**Questions for debrief:**
-Calibration session (run before first candidate screens):
-Bring all interviewers together for 30 minutes. Walk through the scorecard. Align on what a 4 looks like vs a 3. Surface any disagreements before they affect a real candidate.
+---
 
-Week 3–6: Sourcing & Pipeline
-Source Mix Targets
-For most technical roles at early-stage companies, target this source distribution:
-SourceTarget %NotesDirect outbound50–60%Highest quality, lowest competitionEmployee referrals20–30%Fastest time-to-hire, highest retentionInbound / job boards10–20%Volume play, lower signalAgency0–10%Last resort for senior/niche roles only
-If you're relying on inbound for more than 30% of your pipeline at an early-stage company, you're not sourcing aggressively enough.
-Outbound Sourcing Workflow
-For each role:
+## Step 3 — Sourcing & Pipeline (Week 3–6)
 
-Build the target list — 40–60 names before sending a single message
+### Source Mix Targets
 
-Use ArXiv, GitHub, Papers With Code, Google Scholar (technical roles)
-Use LinkedIn X-Ray, SeekOut, Gem (all roles)
-Use conference author lists, patent databases (research/hardware roles)
+| Source | Target % | Notes |
+|---|---|---|
+| Direct outbound | 50–60% | Highest quality, lowest competition |
+| Employee referrals | 20–30% | Fastest time-to-hire, highest retention |
+| Inbound / job boards | 10–20% | Volume play, lower signal |
+| Agency | 0–10% | Last resort for senior/niche roles |
 
+If you're relying on inbound for more than 30% of pipeline at an early-stage company, you're not sourcing aggressively enough.
 
-Prioritize by signal strength
+### Outbound Sourcing Workflow
 
-Tier 1: Referrals + warm intros (contact immediately)
-Tier 2: Strong profile match + recent tenure signals (contact within 48hr)
-Tier 3: Good match but unclear fit (contact in batch)
+1. **Build the target list** — 40–60 names before sending a single message
+   - Technical roles: ArXiv, GitHub, Papers With Code, Google Scholar, conference proceedings
+   - All roles: LinkedIn X-Ray, SeekOut, Gem
+   - Hardware/semiconductor: IEEE Xplore, patent databases
 
+2. **Prioritize by signal strength**
+   - Tier 1: Referrals + warm intros → contact immediately
+   - Tier 2: Strong match + tenure signals → contact within 48hr
+   - Tier 3: Good match, unclear fit → contact in batch
 
-Write personalized outreach
+3. **Write personalized outreach**
+   - Reference something specific: their paper, repo, company, or project
+   - One sentence on why this role fits them specifically
+   - One honest sentence on the company (stage and risk included)
+   - Clear ask: 20 minutes, not "let me know if you're interested"
 
-Reference something specific: their paper, their repo, their company, their background
-One sentence on why this role specifically fits them
-One sentence on the company (be honest about stage and risk)
-Clear ask: 20 minutes, not "let me know if you're interested"
+4. **Follow-up cadence**
+   - Day 1: Initial outreach
+   - Day 5: One follow-up if no response
+   - Day 10: Final touch — different channel or angle
+   - After Day 10: Move on, mark for future nurture
 
+5. **Track everything in ATS**
+   - Every sourced name → logged as prospect
+   - Every message → logged with date and channel
+   - Every response → moved to appropriate stage
 
-Follow-up cadence
+### Referral Program Setup
 
-Day 1: Initial outreach (LinkedIn InMail or email)
-Day 5: One follow-up if no response
-Day 10: Final touch — different channel or different angle
-After Day 10: Move on, mark for future nurture
+- [ ] Define the referral bonus (cash, equity, or both)
+- [ ] Create a simple submission process (Google Form or ATS integration)
+- [ ] Send all-hands message from CEO introducing the program
+- [ ] Share open roles with the full team weekly
+- [ ] Close the loop: tell the referrer what happened and why
+- [ ] Pay quickly — slow bonuses kill referral culture
 
-
-Track everything in the ATS
-
-Every name sourced → logged as prospect
-Every message sent → logged with date and channel
-Every response → moved to appropriate stage
-
-
-
-Referral Program Setup
-Referrals are the highest-quality, lowest-cost source at early-stage companies. Most startups underinvest here.
-Launch checklist:
-
- Define the referral bonus (cash, equity, or both — be competitive)
- Create a simple submission process (Google Form or ATS integration)
- Send an all-hands message from the CEO introducing the program
- Share open roles with the full team weekly — don't assume people know what you need
- Close the loop: tell the referrer what happened and why (within reason)
- Pay quickly — slow referral bonuses kill referral culture
-
-Referral ask script (for employees):
-Hey [Name] — we're hiring a [Role] and I'd love your help.
-The ideal person has [2-3 specific criteria].
+**Referral ask script:**
+```
+"Hey [Name] — we're hiring a [Role] and I'd love your help.
+The ideal person has [2–3 specific criteria].
 You don't need to vouch for them — just make the intro and I'll take it from there.
-Is anyone in your network who comes to mind?
+Anyone come to mind?"
+```
 
-Week 4–8: Candidate Experience & Offer Process
-Candidate Experience Standards
-At an early-stage company, every candidate interaction is a brand impression. You often don't have the brand recognition to absorb a bad experience.
-Non-negotiables:
+---
 
-Respond to every application within 5 business days (even rejections)
-Confirm every interview within 24 hours of scheduling
-Send an agenda before every onsite
-Debrief and deliver feedback within 48 hours of final interview
-Never ghost — a rejection is better than silence
+## Step 4 — Candidate Experience (Week 4–8)
 
-Interview day preparation:
-Send 24 hours before onsite:
+Every candidate interaction is a brand impression. You often don't have brand recognition to absorb a bad experience.
+
+**Non-negotiables:**
+- Respond to every application within 5 business days
+- Confirm every interview within 24 hours of scheduling
+- Send an agenda before every onsite
+- Debrief and deliver feedback within 48 hours of final interview
+- Never ghost — a rejection is better than silence
+
+**Interview day prep (send 24 hours before):**
+```
 - Confirmed schedule with interviewer names and LinkedIn profiles
 - Interview format for each session
 - Parking / building access / video link
-- Contact number for day-of questions
+- Day-of contact number
 - What to expect from the process after today
-Offer Construction
-Before extending an offer, align internally on:
+```
 
- Compensation (base, bonus if applicable, equity)
- Equity details (strike price, cliff, vesting schedule, last 409A)
- Start date
- Offer expiration (give candidates at least 5 business days — never pressure close)
- Approval chain (who needs to sign off before the call)
+---
 
-Offer call structure (recruiter-led):
+## Step 5 — Offer Construction
 
-Open with genuine enthusiasm — this is a celebration, not a transaction
-Walk through compensation clearly: base → equity → benefits → total comp
-Explain equity in plain language — most candidates don't know how to value options
-Pause and ask: "How are you feeling about this?"
-Surface objections early — don't wait for them to decline in writing
-Set a clear follow-up: "I'll send the written offer today. When can we reconnect?"
+Before extending any offer, align internally on:
 
-Common objections and responses:
-"The base is lower than I expected"
-→ Understand their expectation and the gap. Is equity the lever? Is there flexibility? Be honest about what you can and can't do. Never make a counter-offer you can't honor.
-"I need more time"
-→ "Of course — how long do you need?" Give the time. Pressure closing a strong candidate on a short deadline is the fastest way to lose them and damage your brand.
-"I have another offer"
-→ "That's great — can you tell me more about it?" Understand the competing offer before deciding whether to compete. Not every other offer is worth matching.
-"I'm worried about startup risk"
-→ Be honest. Share what you can about runway, investors, business momentum. If you can't make a compelling case, the candidate is right to be worried.
+- [ ] Compensation (base, bonus if applicable, equity)
+- [ ] Equity details (strike price, cliff, vesting, last 409A)
+- [ ] Start date
+- [ ] Offer expiration (minimum 5 business days — never pressure close)
+- [ ] Approval chain (who needs to sign off)
 
-Ongoing: Metrics & Reporting
-Weekly CEO/Founder Hiring Sync (30 min)
-Every week, come prepared with:
+**Offer call structure:**
+1. Open with genuine enthusiasm — this is a celebration, not a transaction
+2. Walk through comp clearly: base → equity → benefits → total comp
+3. Explain equity in plain language — most candidates don't know how to value options
+4. Pause: "How are you feeling about this?"
+5. Surface objections early — don't wait for a written decline
+6. Set a clear follow-up: "I'll send the written offer today. When can we reconnect?"
+
+**Common objections:**
+
+*"The base is lower than I expected"*
+→ Understand the gap. Is equity the lever? Be honest about what you can and can't do.
+
+*"I need more time"*
+→ "Of course — how long do you need?" Give the time. Pressure-closing loses candidates.
+
+*"I have another offer"*
+→ "That's great — can you tell me more?" Understand the competing offer before deciding to compete.
+
+*"I'm worried about startup risk"*
+→ Be honest. Share runway, investors, momentum. If you can't make a compelling case, the candidate is right to be worried.
+
+---
+
+## Step 6 — Metrics & Reporting
+
+### Weekly CEO/Founder Sync (30 min)
+
+Come prepared with:
+
+```
 Open Roles Update:
 [Role] — [# in pipeline] — [Stage breakdown] — [Blockers]
 
 Offers:
-[Any pending offers, expected close dates]
+[Pending offers, expected close dates]
 
 Hires This Week:
 [Names, roles, start dates]
 
 Metrics:
 - Total pipeline: X candidates across Y roles
-- Interviews scheduled this week: X
-- Offers extended: X | Offers accepted: X
+- Interviews scheduled: X
+- Offers extended: X | Accepted: X
 - Time-to-hire (rolling 30 days): X days
 
 Asks:
-- [Any decisions needed from founders]
-- [Any roles needing re-prioritization]
-- [Any process blockers to resolve]
-Core Metrics to Track
-MetricWhat it tells youTargetTime-to-hireSpeed of full process<30 days for IC, <45 for leadershipTime-in-stageWhere candidates stallNo stage >7 daysOffer acceptance rateQuality of process + offer>85%Source-to-hireWhich channels produce hiresKnow your best 2Pipeline conversionFunnel health by stageTrack week over weekInterviewer consistencyCalibration qualityScore variance <1 pt across interviewers
-Monthly Talent Review (60 min with leadership)
-Quarterly is too slow at an early-stage company. Run monthly:
+- [Decisions needed from founders]
+- [Roles needing re-prioritization]
+- [Process blockers]
+```
 
-Headcount plan vs. actuals
-Roles at risk (stalled searches, no pipeline)
-Market feedback (what candidates are saying about comp, process, brand)
-Upcoming departures or backfills
-Sourcing channel performance review
-Upcoming hiring needs for next quarter
+### Core Metrics
 
+| Metric | What it tells you | Target |
+|---|---|---|
+| Time-to-hire | Speed of full process | <30 days IC, <45 days leadership |
+| Time-in-stage | Where candidates stall | No stage >7 days |
+| Offer acceptance rate | Quality of process + offer | >85% |
+| Source-to-hire | Which channels produce hires | Know your best 2 |
+| Pipeline conversion | Funnel health by stage | Track week over week |
 
-Common Failure Modes (and How to Avoid Them)
-Failure: Hiring managers who don't give feedback
-→ Make feedback submission the prerequisite for seeing the next candidate. No scorecard = no debrief = no next round. Set this expectation in week 1.
-Failure: Interview loops that expand endlessly
-→ Cap the loop at onsite. More than 5 interview stages for an IC role signals indecision, not rigor. Candidates notice and self-select out.
-Failure: Founders who interview everyone
-→ Founder time in the interview loop should be reserved for the final stage. Define this upfront. Protect their time and candidate experience both.
-Failure: Slow decisions after onsites
-→ Define a 48-hour debrief and decision SLA. Put it in the interviewer onboarding email. Every day of delay costs you candidates.
-Failure: No sourcing when the pipeline is full
-→ Build pipeline continuously, not reactively. The roles you open next quarter need pipeline built today.
-Failure: ATS becomes a black hole
-→ Every candidate in the ATS should have a clear next action and owner. A weekly pipeline review (even 15 minutes) prevents candidates from going cold.
-Failure: Treating every role the same
-→ A founding engineer search is different from a marketing coordinator search. Calibrate your time and channel mix to the role's difficulty and impact.
+---
 
-Templates & Assets Checklist
-By the end of month 1, you should have:
+## Step 7 — Common Failure Modes
 
- ATS configured with stages, email templates, and rejection reasons
- Intake questionnaire (role-level and company-level versions)
- JD template and at least 3 live JDs
- Interview loop defined for each active role
- Scorecards for each interview stage
- Offer letter template (work with legal/finance to approve)
- Referral program live and communicated to team
- Weekly hiring sync cadence established with CEO/founders
- Sourcing pipeline of 30+ names per open role
- Candidate experience SLAs documented and followed
+**Hiring managers who don't give feedback**
+→ No scorecard = no debrief = no next candidate. Set this expectation in week 1.
 
+**Interview loops that expand endlessly**
+→ Cap at onsite. More than 5 stages signals indecision, not rigor. Candidates notice.
 
-The 90-Day Milestones
-Day 30:
+**Founders who interview everyone**
+→ Reserve founder time for the final stage only. Define this upfront.
 
-ATS live and configured
-All active roles have JDs, intake notes, and defined interview loops
-First hires in pipeline for priority roles
-Weekly sync cadence established with founders
+**Slow decisions after onsites**
+→ 48-hour debrief and decision SLA. Put it in the interviewer onboarding email.
 
-Day 60:
+**No sourcing when the pipeline is full**
+→ Build pipeline continuously, not reactively. Next quarter's roles need pipeline built today.
 
-First 2–3 hires closed or offer stage
-Referral program active
-Source mix tracked and reported
-Hiring manager calibration sessions run for all active loops
+**ATS becomes a black hole**
+→ Every candidate should have a clear next action and owner. A weekly 15-min pipeline review prevents candidates going cold.
 
-Day 90:
+---
 
-Recruiting infrastructure documented and replicable
-Metrics dashboard live and shared with leadership
-Employer brand touchpoints improved (careers page, JDs, Glassdoor if applicable)
-Pipeline healthy enough that you're ahead of demand, not behind it
+## Step 8 — Templates & Assets Checklist
 
+By end of month 1, you should have:
+
+- [ ] ATS configured with stages, email templates, and rejection reasons
+- [ ] Intake questionnaire (role-level and company-level)
+- [ ] JD template and at least 3 live JDs
+- [ ] Interview loop defined for each active role
+- [ ] Scorecards for each interview stage
+- [ ] Offer letter template (approved by legal/finance)
+- [ ] Referral program live and communicated
+- [ ] Weekly hiring sync cadence established with CEO/founders
+- [ ] Sourcing pipeline of 30+ names per open role
+- [ ] Candidate experience SLAs documented and followed
+
+---
+
+## The 30/60/90 Day Milestones
+
+**Day 30:**
+- ATS live and configured
+- All active roles have JDs, intake notes, and defined interview loops
+- First hires in pipeline for priority roles
+- Weekly sync cadence established with founders
+
+**Day 60:**
+- First 2–3 hires closed or at offer stage
+- Referral program active
+- Source mix tracked and reported
+- Hiring manager calibration sessions run for all active loops
+
+**Day 90:**
+- Recruiting infrastructure documented and replicable
+- Metrics dashboard live and shared with leadership
+- Employer brand touchpoints improved (careers page, JDs, Glassdoor)
+- Pipeline healthy enough that you're ahead of demand, not behind it
+
+---
+
+## Related Files in This Portfolio
+
+| Topic | Location |
+|---|---|
+| Market mapping & competitive intelligence | [`/market-intelligence/market-mapping-guide.md`](../market-intelligence/market-mapping-guide.md) |
+| Compensation benchmarking & band building | [`/market-intelligence/comp-benchmarking-guide.md`](../market-intelligence/comp-benchmarking-guide.md) |
+| Employer branding & JD writing | [`/employer-branding/employer-branding-playbook.md`](../employer-branding/employer-branding-playbook.md) |
+| Pre-boarding, Day 1, onboarding | [`/onboarding/pre-boarding-checklist.md`](../onboarding/pre-boarding-checklist.md) |
+| IT equipment & access procurement | [`/onboarding/it-equipment-procurement-guide.md`](../onboarding/it-equipment-procurement-guide.md) |
+| AI/ML sourcing channels | [`/sourcing/ai-ml-sourcing-guide.md`](../sourcing/ai-ml-sourcing-guide.md) |
+| Advanced web mining & resume scraping | [`/sourcing/advanced-web-mining-guide.md`](../sourcing/advanced-web-mining-guide.md) |
+
+---
 
 *Part of the [recruiting-portfolio](https://github.com/marvelchandra/recruiting-portfolio) by Chandra Buduri*

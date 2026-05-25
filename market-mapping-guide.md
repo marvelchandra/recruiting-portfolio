@@ -1,6 +1,6 @@
 # Market Mapping Guide — Talent Intelligence Before You Source
 
-**For:** Founding recruiters, heads of talent, and recruiting leads running searches in competitive or niche talent markets  
+**For:** Founders, CEOs, Founding recruiters, heads of talent, and recruiting leads running searches in competitive or niche talent markets  
 **Maintained by:** Chandra Buduri · [linkedin.com/in/chandrabuduri](https://linkedin.com/in/chandrabuduri)
 
 > Market mapping is the work that happens before sourcing begins. It answers the question every founder eventually asks: "Who are the 50 best people in the world for this role, and where are they?" Done well, it gives you a defensible point of view on the talent landscape — not just names, but pools, movement patterns, and competitive dynamics.

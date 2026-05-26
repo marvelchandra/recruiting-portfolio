@@ -218,7 +218,7 @@ I'm currently open to:
 
 Ideally building from scratch in a high-bar technical environment.
 
-📧 budri.chandra@gmail.com  
+
 🔗 [linkedin.com/in/chandrabuduri](https://linkedin.com/in/chandrabuduri)
 
 ---

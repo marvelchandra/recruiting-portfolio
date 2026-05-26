@@ -675,30 +675,30 @@ footer{
         </div>
       </div>
     </div>
-    <div class="network-viz reveal" style="height:560px;position:sticky;top:80px;">
+    <div class="network-viz reveal" style="height:580px;position:sticky;top:80px;">
       <canvas id="brainCv" style="width:100%;height:100%;border-radius:8px;background:#050d1a;display:block;"></canvas>
       <script>
       (function(){
         const cv=document.getElementById('brainCv');
         const ctx=cv.getContext('2d');
         function h2r(hex,a){var h=hex.replace('#','');if(h.length===3){h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];}var r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);return 'rgba('+r+','+g+','+b+','+a+')';}
-        cv.width=560;cv.height=560;
-        const W=560,H=560,cx=W/2,cy=H/2-15;
+        cv.width=620;cv.height=580;
+        const W=620,H=580,cx=W/2,cy=H/2-20;
         let fr=0;
 
         function brainShape(){
           ctx.beginPath();
-          ctx.moveTo(cx,cy-90);
-          ctx.bezierCurveTo(cx-30,cy-105,cx-72,cy-98,cx-108,cy-75);
-          ctx.bezierCurveTo(cx-140,cy-50,cx-145,cy-18,cx-138,cy+12);
-          ctx.bezierCurveTo(cx-130,cy+42,cx-112,cy+68,cx-84,cy+86);
-          ctx.bezierCurveTo(cx-58,cy+104,cx-26,cy+112,cx-7,cy+113);
-          ctx.bezierCurveTo(cx-5,cy+115,cx-3,cy+132,cx,cy+145);
-          ctx.bezierCurveTo(cx+3,cy+132,cx+5,cy+115,cx+7,cy+113);
-          ctx.bezierCurveTo(cx+26,cy+112,cx+58,cy+104,cx+84,cy+86);
-          ctx.bezierCurveTo(cx+112,cy+68,cx+130,cy+42,cx+138,cy+12);
-          ctx.bezierCurveTo(cx+145,cy-18,cx+140,cy-50,cx+108,cy-75);
-          ctx.bezierCurveTo(cx+72,cy-98,cx+30,cy-105,cx,cy-90);
+          ctx.moveTo(cx,cy-95);
+          ctx.bezierCurveTo(cx-32,cy-112,cx-78,cy-105,cx-118,cy-78);
+          ctx.bezierCurveTo(cx-155,cy-50,cx-158,cy-14,cx-150,cy+18);
+          ctx.bezierCurveTo(cx-142,cy+48,cx-120,cy+72,cx-88,cy+90);
+          ctx.bezierCurveTo(cx-58,cy+106,cx-22,cy+112,cx-6,cy+112);
+          ctx.bezierCurveTo(cx-4,cy+113,cx-2,cy+125,cx,cy+132);
+          ctx.bezierCurveTo(cx+2,cy+125,cx+4,cy+113,cx+6,cy+112);
+          ctx.bezierCurveTo(cx+22,cy+112,cx+58,cy+106,cx+88,cy+90);
+          ctx.bezierCurveTo(cx+120,cy+72,cx+142,cy+48,cx+150,cy+18);
+          ctx.bezierCurveTo(cx+158,cy-14,cx+155,cy-50,cx+118,cy-78);
+          ctx.bezierCurveTo(cx+78,cy-105,cx+32,cy-112,cx,cy-95);
           ctx.closePath();
         }
 
@@ -738,15 +738,15 @@ footer{
         ];
 
         const outer=[
-          {ox:-205,oy:-118,ix:-110,iy:-65,label:'ArXiv',col:'#4FC3F7',ta:'right'},
-          {ox:205,oy:-118,ix:110,iy:-65,label:'GitHub',col:'#FFB74D',ta:'left'},
-          {ox:-218,oy:10,ix:-136,iy:10,label:'IEEE Xplore',col:'#26C6DA',ta:'right'},
-          {ox:218,oy:10,ix:136,iy:10,label:'X-Ray Boolean',col:'#FF8A65',ta:'left'},
-          {ox:-185,oy:135,ix:-86,iy:85,label:'Kaggle',col:'#80DEEA',ta:'right'},
-          {ox:185,oy:135,ix:86,iy:85,label:'Conferences',col:'#FFB74D',ta:'left'},
-          {ox:0,oy:-195,ix:0,iy:-90,label:'University Labs',col:'#CE93D8',ta:'center'},
-          {ox:-100,oy:200,ix:-12,iy:130,label:'Resume Mining',col:'#A5D6A7',ta:'right'},
-          {ox:100,oy:200,ix:12,iy:130,label:'Patents·USPTO',col:'#FFCC80',ta:'left'},
+          {ox:-195,oy:-115,ix:-120,iy:-65,label:'ArXiv',col:'#4FC3F7',ta:'right'},
+          {ox:195,oy:-115,ix:120,iy:-65,label:'GitHub',col:'#FFB74D',ta:'left'},
+          {ox:-210,oy:10,ix:-150,iy:10,label:'IEEE Xplore',col:'#26C6DA',ta:'right'},
+          {ox:210,oy:10,ix:150,iy:10,label:'X-Ray Boolean',col:'#FF8A65',ta:'left'},
+          {ox:-178,oy:128,ix:-90,iy:82,label:'Kaggle',col:'#80DEEA',ta:'right'},
+          {ox:178,oy:128,ix:90,iy:82,label:'Conferences',col:'#FFB74D',ta:'left'},
+          {ox:0,oy:-188,ix:0,iy:-95,label:'University Labs',col:'#CE93D8',ta:'center'},
+          {ox:-95,oy:192,ix:-10,iy:125,label:'Resume Mining',col:'#A5D6A7',ta:'right'},
+          {ox:95,oy:192,ix:10,iy:125,label:'Patents·USPTO',col:'#FFCC80',ta:'left'},
         ].map(n=>({...n,ox:cx+n.ox,oy:cy+n.oy,ix:cx+n.ix,iy:cy+n.iy}));
 
         const hots=[
@@ -801,9 +801,9 @@ footer{
             ctx.strokeStyle=`rgba(80,175,255,${0.2+bp*0.06})`;ctx.lineWidth=1.1;ctx.stroke();
           });
 
-          ctx.beginPath();ctx.moveTo(cx,cy-90);
-          ctx.bezierCurveTo(cx-3,cy-55,cx+3,cy-15,cx,cy+38);
-          ctx.bezierCurveTo(cx-2,cy+72,cx+2,cy+98,cx,cy+113);
+          ctx.beginPath();ctx.moveTo(cx,cy-95);
+          ctx.bezierCurveTo(cx-3,cy-58,cx+3,cy-18,cx,cy+35);
+          ctx.bezierCurveTo(cx-2,cy+70,cx+2,cy+100,cx,cy+112);
           ctx.strokeStyle=`rgba(50,130,220,${0.4+bp*0.1})`;ctx.lineWidth=2;ctx.stroke();
 
           hots.forEach(n=>{
@@ -844,16 +844,17 @@ footer{
             ctx.fillStyle=og;ctx.beginPath();ctx.arc(n.ox,n.oy,15,0,Math.PI*2);ctx.fill();
             ctx.beginPath();ctx.arc(n.ox,n.oy,4,0,Math.PI*2);
             ctx.fillStyle=h2r(n.col,fl);ctx.fill();
-            ctx.fillStyle=n.col;ctx.font='500 10px Inter,sans-serif';
+            ctx.fillStyle=n.col;
+            ctx.font='600 12px -apple-system,BlinkMacSystemFont,Inter,sans-serif';
             ctx.textAlign=n.ta;ctx.textBaseline='middle';
-            const lx=n.ta==='right'?n.ox-9:n.ta==='left'?n.ox+9:n.ox;
-            const ly=n.oy<cy-55?n.oy-15:n.oy>cy+55?n.oy+15:n.oy;
+            const lx=n.ta==='right'?n.ox-12:n.ta==='left'?n.ox+12:n.ox;
+            const ly=n.oy<cy-55?n.oy-18:n.oy>cy+55?n.oy+18:n.oy;
             ctx.fillText(n.label,lx,ly);
           });
 
-          ctx.fillStyle='rgba(255,255,255,0.92)';ctx.font='italic 11px Georgia,serif';
+          ctx.fillStyle='rgba(255,255,255,0.95)';ctx.font='italic 13px Georgia,serif';
           ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('Chandra Buduri',cx,cy-10);
-          ctx.fillStyle='rgba(150,210,255,0.6)';ctx.font='8px monospace';ctx.fillText('600+ hires',cx,cy+4);
+          ctx.fillStyle='rgba(150,210,255,0.7)';ctx.font='10px monospace';ctx.fillText('600+ hires',cx,cy+6);
 
           fr++;
           if(fr%12===0)addP();if(fr%6===0&&Math.random()>0.5)addP();

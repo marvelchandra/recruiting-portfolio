@@ -166,7 +166,7 @@ This came out of a real frustration — most JD feedback is subjective. I wanted
 
 ## Selected Experience
 
-**CommScope → Vistance Networks** *(Oct 2024 – May 2026)*  
+**CommScope → Vistance Networks** *(Oct 2024 – Present)*  
 100+ hires in 12 months as sole recruiter across a 4-company acquisition (CommScope, Ruckus, Aurora, Amphenol). Engineering, GTM, and G&A. Deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%.
 
 **Independent — Seed to Pre-IPO** *(May 2023 – Oct 2024)*  

@@ -938,7 +938,7 @@ footer{
   <p class="cta-sub reveal">Open to founding recruiter, Head of TA, senior technical, and GTM roles<br>at high-bar technical startups. Series A–C, deep tech, building from scratch.</p>
   <div class="cta-links reveal">
     <a href="https://linkedin.com/in/chandrabuduri" class="cta-btn cta-btn-primary" target="_blank">LinkedIn →</a>
-    <a href="mailto:budri.chandra@gmail.com" class="cta-btn cta-btn-secondary">budri.chandra@gmail.com</a>
+    
     <a href="https://github.com/marvelchandra/recruiting-portfolio" class="cta-btn cta-btn-secondary" target="_blank">Repo →</a>
     <a href="https://github.com/marvelchandra" class="cta-btn cta-btn-secondary" target="_blank">GitHub Profile →</a>
   </div>
@@ -1023,7 +1023,7 @@ async function askQuestion(){
 
   if(WORKER_URL==='YOUR_WORKER_URL_HERE'){
     response.classList.add('visible');
-    response.textContent='Reach out directly at budri.chandra@gmail.com — happy to answer any recruiting question personally.';
+    response.textContent='This feature is coming soon. In the meantime, connect with me on LinkedIn.';
     return;
   }
 
@@ -1040,7 +1040,7 @@ async function askQuestion(){
     const data=await res.json();
     if(data.error){
       response.classList.add('visible');
-      response.textContent='Something went wrong. Reach out directly at budri.chandra@gmail.com.';
+      response.textContent='Something went wrong. Connect with me on LinkedIn.';
     } else {
       const text=data.response;
       response.classList.add('visible');response.textContent='';
@@ -1052,7 +1052,7 @@ async function askQuestion(){
     }
   } catch(err){
     response.classList.add('visible');
-    response.textContent='Something went wrong. Reach out directly at budri.chandra@gmail.com.';
+    response.textContent='Something went wrong. Connect with me on LinkedIn.';
   }
   btn.disabled=false;btn.textContent='Ask →';status.textContent='';
 }

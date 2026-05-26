@@ -218,7 +218,6 @@ I'm currently open to:
 
 Ideally building from scratch in a high-bar technical environment.
 
-
 🔗 [linkedin.com/in/chandrabuduri](https://linkedin.com/in/chandrabuduri)
 
 ---

@@ -675,68 +675,100 @@ footer{
       </div>
     </div>
     <div class="network-viz reveal">
-      <svg viewBox="0 0 440 480" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 500 520" xmlns="http://www.w3.org/2000/svg" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
         <defs>
           <radialGradient id="cg" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#C4A055" stop-opacity="0.15"/>
+            <stop offset="0%" stop-color="#C4A055" stop-opacity="0.18"/>
             <stop offset="100%" stop-color="#C4A055" stop-opacity="0"/>
           </radialGradient>
-          <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- Node background fill for text legibility -->
+          <filter id="solid">
+            <feFlood flood-color="rgba(10,12,18,0.85)" result="bg"/>
+            <feMerge><feMergeNode in="bg"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
         </defs>
-        <g stroke="rgba(196,160,85,0.08)" stroke-width="1" fill="none">
-          <line x1="220" y1="240" x2="110" y2="90"/>
-          <line x1="220" y1="240" x2="330" y2="90"/>
-          <line x1="220" y1="240" x2="75" y2="240"/>
-          <line x1="220" y1="240" x2="365" y2="240"/>
-          <line x1="220" y1="240" x2="110" y2="390"/>
-          <line x1="220" y1="240" x2="330" y2="390"/>
-          <line x1="220" y1="240" x2="220" y2="55"/>
-          <line x1="110" y1="90" x2="220" y2="55"/>
-          <line x1="330" y1="90" x2="220" y2="55"/>
+
+        <!-- Connection lines -->
+        <g stroke="rgba(196,160,85,0.1)" stroke-width="1" fill="none">
+          <line x1="250" y1="260" x2="130" y2="100"/>
+          <line x1="250" y1="260" x2="370" y2="100"/>
+          <line x1="250" y1="260" x2="80" y2="260"/>
+          <line x1="250" y1="260" x2="420" y2="260"/>
+          <line x1="250" y1="260" x2="130" y2="420"/>
+          <line x1="250" y1="260" x2="370" y2="420"/>
+          <line x1="250" y1="260" x2="250" y2="55"/>
+          <line x1="130" y1="100" x2="250" y2="55"/>
+          <line x1="370" y1="100" x2="250" y2="55"/>
         </g>
+
+        <!-- Outer nodes — larger circles, solid dark fill, full-opacity text -->
         <g filter="url(#glow)">
-          <circle cx="220" cy="55" r="26" fill="rgba(18,138,108,0.06)" stroke="rgba(18,138,108,0.35)" stroke-width="1"/>
-          <text x="220" y="50" text-anchor="middle" fill="rgba(18,138,108,0.85)" font-family="Inter" font-size="8" font-weight="500">ArXiv</text>
-          <text x="220" y="63" text-anchor="middle" fill="rgba(18,138,108,0.45)" font-family="DM Mono" font-size="7">Papers·Scholar</text>
-          <circle cx="110" cy="90" r="22" fill="rgba(196,160,85,0.05)" stroke="rgba(196,160,85,0.3)" stroke-width="1"/>
-          <text x="110" y="85" text-anchor="middle" fill="rgba(196,160,85,0.85)" font-family="Inter" font-size="8" font-weight="500">GitHub</text>
-          <text x="110" y="98" text-anchor="middle" fill="rgba(196,160,85,0.45)" font-family="DM Mono" font-size="7">API</text>
-          <circle cx="330" cy="90" r="22" fill="rgba(138,53,32,0.05)" stroke="rgba(138,53,32,0.3)" stroke-width="1"/>
-          <text x="330" y="85" text-anchor="middle" fill="rgba(200,100,70,0.85)" font-family="Inter" font-size="8" font-weight="500">IEEE</text>
-          <text x="330" y="98" text-anchor="middle" fill="rgba(200,100,70,0.45)" font-family="DM Mono" font-size="7">Patents</text>
-          <circle cx="75" cy="240" r="24" fill="rgba(14,21,32,0.15)" stroke="rgba(100,140,180,0.3)" stroke-width="1"/>
-          <text x="75" y="235" text-anchor="middle" fill="rgba(140,180,215,0.85)" font-family="Inter" font-size="8" font-weight="500">X-Ray</text>
-          <text x="75" y="248" text-anchor="middle" fill="rgba(140,180,215,0.45)" font-family="DM Mono" font-size="7">Boolean</text>
-          <circle cx="365" cy="240" r="24" fill="rgba(18,138,108,0.05)" stroke="rgba(18,138,108,0.25)" stroke-width="1"/>
-          <text x="365" y="235" text-anchor="middle" fill="rgba(18,138,108,0.85)" font-family="Inter" font-size="7" font-weight="500">OpenReview</text>
-          <text x="365" y="248" text-anchor="middle" fill="rgba(18,138,108,0.45)" font-family="DM Mono" font-size="7">Conferences</text>
-          <circle cx="110" cy="390" r="20" fill="rgba(196,160,85,0.04)" stroke="rgba(196,160,85,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
-          <text x="110" y="385" text-anchor="middle" fill="rgba(196,160,85,0.65)" font-family="Inter" font-size="8" font-weight="500">Kaggle</text>
-          <text x="110" y="398" text-anchor="middle" fill="rgba(196,160,85,0.35)" font-family="DM Mono" font-size="7">HuggingFace</text>
-          <circle cx="330" cy="390" r="20" fill="rgba(14,21,32,0.08)" stroke="rgba(100,140,180,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
-          <text x="330" y="385" text-anchor="middle" fill="rgba(140,180,215,0.65)" font-family="Inter" font-size="8" font-weight="500">ORCID</text>
-          <text x="330" y="398" text-anchor="middle" fill="rgba(140,180,215,0.35)" font-family="DM Mono" font-size="7">Uni Labs</text>
+
+          <!-- ArXiv — top center -->
+          <circle cx="250" cy="55" r="36" fill="rgba(8,20,16,0.95)" stroke="rgba(18,138,108,0.6)" stroke-width="1.5"/>
+          <text x="250" y="49" text-anchor="middle" fill="#2ECFA0" font-family="Inter,sans-serif" font-size="11" font-weight="600">ArXiv</text>
+          <text x="250" y="64" text-anchor="middle" fill="rgba(46,207,160,0.6)" font-family="monospace" font-size="9">Papers · Scholar</text>
+
+          <!-- GitHub — top left -->
+          <circle cx="130" cy="100" r="32" fill="rgba(12,10,6,0.95)" stroke="rgba(196,160,85,0.55)" stroke-width="1.5"/>
+          <text x="130" y="95" text-anchor="middle" fill="#DDB96A" font-family="Inter,sans-serif" font-size="11" font-weight="600">GitHub</text>
+          <text x="130" y="110" text-anchor="middle" fill="rgba(221,185,106,0.55)" font-family="monospace" font-size="9">API Mining</text>
+
+          <!-- IEEE — top right -->
+          <circle cx="370" cy="100" r="32" fill="rgba(18,8,6,0.95)" stroke="rgba(200,100,70,0.55)" stroke-width="1.5"/>
+          <text x="370" y="95" text-anchor="middle" fill="#E87A55" font-family="Inter,sans-serif" font-size="11" font-weight="600">IEEE</text>
+          <text x="370" y="110" text-anchor="middle" fill="rgba(232,122,85,0.55)" font-family="monospace" font-size="9">Patents</text>
+
+          <!-- X-Ray — mid left -->
+          <circle cx="80" cy="260" r="34" fill="rgba(6,10,18,0.95)" stroke="rgba(100,150,200,0.5)" stroke-width="1.5"/>
+          <text x="80" y="254" text-anchor="middle" fill="#8AB4D8" font-family="Inter,sans-serif" font-size="11" font-weight="600">X-Ray</text>
+          <text x="80" y="270" text-anchor="middle" fill="rgba(138,180,216,0.55)" font-family="monospace" font-size="9">Boolean</text>
+
+          <!-- OpenReview — mid right -->
+          <circle cx="420" cy="260" r="34" fill="rgba(6,14,12,0.95)" stroke="rgba(18,138,108,0.45)" stroke-width="1.5"/>
+          <text x="420" y="252" text-anchor="middle" fill="#2ECFA0" font-family="Inter,sans-serif" font-size="10" font-weight="600">OpenReview</text>
+          <text x="420" y="267" text-anchor="middle" fill="rgba(46,207,160,0.5)" font-family="monospace" font-size="9">Conferences</text>
+
+          <!-- Kaggle — bot left -->
+          <circle cx="130" cy="420" r="30" fill="rgba(12,10,6,0.95)" stroke="rgba(196,160,85,0.4)" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="130" y="415" text-anchor="middle" fill="rgba(221,185,106,0.85)" font-family="Inter,sans-serif" font-size="11" font-weight="600">Kaggle</text>
+          <text x="130" y="430" text-anchor="middle" fill="rgba(221,185,106,0.45)" font-family="monospace" font-size="9">HuggingFace</text>
+
+          <!-- ORCID — bot right -->
+          <circle cx="370" cy="420" r="30" fill="rgba(6,10,18,0.95)" stroke="rgba(100,150,200,0.35)" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="370" y="415" text-anchor="middle" fill="rgba(138,180,216,0.85)" font-family="Inter,sans-serif" font-size="11" font-weight="600">ORCID</text>
+          <text x="370" y="430" text-anchor="middle" fill="rgba(138,180,216,0.45)" font-family="monospace" font-size="9">Uni Labs</text>
+
         </g>
-        <circle cx="220" cy="240" r="48" fill="url(#cg)"/>
-        <circle cx="220" cy="240" r="42" fill="rgba(10,12,18,0.96)" stroke="rgba(196,160,85,0.3)" stroke-width="1"/>
-        <circle cx="220" cy="240" r="36" fill="none" stroke="rgba(196,160,85,0.08)" stroke-width="1" stroke-dasharray="3,3">
-          <animateTransform attributeName="transform" type="rotate" from="0 220 240" to="360 220 240" dur="28s" repeatCount="indefinite"/>
+
+        <!-- CENTER NODE -->
+        <circle cx="250" cy="260" r="56" fill="url(#cg)"/>
+        <circle cx="250" cy="260" r="50" fill="rgba(8,10,16,0.97)" stroke="rgba(196,160,85,0.45)" stroke-width="1.5"/>
+        <circle cx="250" cy="260" r="42" fill="none" stroke="rgba(196,160,85,0.08)" stroke-width="1" stroke-dasharray="3,3">
+          <animateTransform attributeName="transform" type="rotate" from="0 250 260" to="360 250 260" dur="28s" repeatCount="indefinite"/>
         </circle>
-        <text x="220" y="233" text-anchor="middle" fill="rgba(196,160,85,0.85)" font-family="Fraunces" font-size="11" font-weight="300" font-style="italic">Chandra</text>
-        <text x="220" y="248" text-anchor="middle" fill="rgba(196,160,85,0.4)" font-family="DM Mono" font-size="8">600+ hires</text>
-        <circle cx="220" cy="240" r="42" fill="none" stroke="rgba(196,160,85,0.1)" stroke-width="1">
-          <animate attributeName="r" values="42;62;42" dur="5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.1;0;0.1" dur="5s" repeatCount="indefinite"/>
+        <text x="250" y="252" text-anchor="middle" fill="rgba(221,185,106,0.95)" font-family="Georgia,serif" font-size="14" font-style="italic">Chandra</text>
+        <text x="250" y="270" text-anchor="middle" fill="rgba(221,185,106,0.5)" font-family="monospace" font-size="10">600+ hires</text>
+
+        <!-- Pulse ring -->
+        <circle cx="250" cy="260" r="50" fill="none" stroke="rgba(196,160,85,0.12)" stroke-width="1">
+          <animate attributeName="r" values="50;72;50" dur="5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.12;0;0.12" dur="5s" repeatCount="indefinite"/>
         </circle>
-        <circle r="2.5" fill="rgba(196,160,85,0.7)"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
-        <path id="p1" d="M220,240 L110,90" fill="none"/>
-        <circle r="2.5" fill="rgba(18,138,108,0.7)"><animateMotion dur="6.5s" repeatCount="indefinite" begin="1.5s"><mpath href="#p2"/></animateMotion></circle>
-        <path id="p2" d="M220,240 L330,90" fill="none"/>
-        <circle r="2.5" fill="rgba(140,180,215,0.7)"><animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s"><mpath href="#p3"/></animateMotion></circle>
-        <path id="p3" d="M220,240 L365,240" fill="none"/>
-        <circle r="2.5" fill="rgba(200,100,70,0.7)"><animateMotion dur="4.5s" repeatCount="indefinite" begin="2.2s"><mpath href="#p4"/></animateMotion></circle>
-        <path id="p4" d="M220,240 L75,240" fill="none"/>
+
+        <!-- Animated dots -->
+        <circle r="3" fill="rgba(221,185,106,0.8)"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+        <path id="p1" d="M250,260 L130,100" fill="none"/>
+        <circle r="3" fill="rgba(46,207,160,0.8)"><animateMotion dur="6.5s" repeatCount="indefinite" begin="1.5s"><mpath href="#p2"/></animateMotion></circle>
+        <path id="p2" d="M250,260 L370,100" fill="none"/>
+        <circle r="3" fill="rgba(138,180,216,0.8)"><animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s"><mpath href="#p3"/></animateMotion></circle>
+        <path id="p3" d="M250,260 L420,260" fill="none"/>
+        <circle r="3" fill="rgba(232,122,85,0.8)"><animateMotion dur="4.5s" repeatCount="indefinite" begin="2.2s"><mpath href="#p4"/></animateMotion></circle>
+        <path id="p4" d="M250,260 L80,260" fill="none"/>
       </svg>
     </div>
   </div>
@@ -751,23 +783,25 @@ footer{
       <div class="timeline-date">2024–2026</div>
       <div class="timeline-body">
         <div class="timeline-co">CommScope → Vistance Networks</div>
-        <div class="timeline-role">Senior Recruiter · Enterprise Networking & Cloud Infrastructure</div>
+        <div class="timeline-role">Contractor → Full-Time Senior Recruiter · Enterprise Networking & Cloud Infrastructure</div>
         <ul class="timeline-bullets">
-          <li>100+ hires in 12 months as sole recruiter across a 4-company acquisition spanning CommScope, Ruckus, Aurora, and Amphenol</li>
-          <li>Deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%</li>
+          <li>Joined as a contractor in Oct 2024; converted to full-time based on performance in Dec 2025 — sole recruiter navigating a multi-entity transition across CommScope, Vistance (Ruckus, Aurora), and Amphenol</li>
+          <li>100+ hires across engineering, GTM, and G&A; deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%</li>
           <li>Built SuccessFactors dashboards giving SVPs real-time visibility into funnel health and hiring velocity</li>
+          <li>Role eliminated in April 2026 as part of firm-wide restructuring following the acquisition integration.</li>
         </ul>
       </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">2023–2024</div>
       <div class="timeline-body">
-        <div class="timeline-co">Independent — Seed to Pre-IPO</div>
+        <div class="timeline-co">Independent — Seed to Pre-IPO / Post-IPO</div>
         <div class="timeline-role">Founding Recruiter · Astera Labs · StormX · AptonShops · Confidential</div>
         <ul class="timeline-bullets">
-          <li>Sole recruiter per engagement — closed ASIC/FPGA, PCIe/CXL, AI/ML, Full-Stack, and GTM roles across US, Canada, India, EMEA</li>
+          <li>Chose fractional founding engagements deliberately — closed ASIC/FPGA, PCIe/CXL, AI/ML, Full-Stack, and GTM roles across US, Canada, India, EMEA</li>
           <li>Built 0→1 recruiting infrastructure from scratch for each client — ATS, scorecards, comp frameworks, 90-day playbooks</li>
           <li>Cut time-to-hire ~35% through high-signal sourcing, structured loops, and weekly founder syncs</li>
+          <li>Transitioned to full-time role at CommScope when the right opportunity emerged; each client engagement was stable and complete at handoff.</li>
         </ul>
       </div>
     </div>
@@ -777,9 +811,10 @@ footer{
         <div class="timeline-co">Arrcus, Inc. — Series D</div>
         <div class="timeline-role">Head of Talent Acquisition · Cloud Networking & Infrastructure</div>
         <ul class="timeline-bullets">
-          <li>Scaled 80 → 130 in under 12 months — closed 9 Director+ global leaders via ghost recruiting and direct outreach</li>
+          <li>Brought back by the founding team as Head of TA — scaled 80 → 130 in under 12 months, closed 9 Director+ global leaders via ghost recruiting and direct outreach</li>
           <li>Led ATS/HRIS migrations, implemented VelocityGlobal EOR across Japan, Europe, and the Middle East</li>
           <li>Weekly KPI dashboards to CEO on pipeline velocity, offer acceptance, and quality-of-hire</li>
+          <li>Following a period of rapid growth, company rightsized the TA function; role and the broader recruiting team were eliminated firm-wide.</li>
         </ul>
       </div>
     </div>
@@ -791,7 +826,8 @@ footer{
         <ul class="timeline-bullets">
           <li>Embedded across 10+ portfolio companies (Modular, Atomic AI, Artera AI, Numberstation) simultaneously</li>
           <li>Managed 15 agency recruiters — closed Head of AI/ML, Staff ML Engineers, Compiler/Runtime L7, Sr Research Engineers</li>
-          <li>Built employer brand, ATS, and hiring infrastructure from zero at each portfolio company; reduced avg TTH ~40%</li>
+          <li>Built employer brand, ATS, and hiring infrastructure from zero at each company; reduced avg TTH ~40%</li>
+          <li>Role eliminated when the firm restructured and closed its physical operations; returned to Arrcus shortly after at the founding team's request.</li>
         </ul>
       </div>
     </div>
@@ -801,8 +837,9 @@ footer{
         <div class="timeline-co">Arrcus, Inc. — Series B–D</div>
         <div class="timeline-role">Founding Senior Recruiter · Cloud Networking</div>
         <ul class="timeline-bullets">
-          <li>First and only recruiter — scaled 50 → 90 including India engineering team 0 → 15 during COVID</li>
+          <li>Joined the founding team I had supported at Cisco as their first recruiter — scaled 50 → 90 including India engineering team 0 → 15 during COVID</li>
           <li>Weekly hiring syncs directly with CEO on headcount plans, pipeline health, and offer approvals</li>
+          <li>Departed to take a Head of TA role at Factory VC; the same founding team brought me back to Arrcus two years later at Series D — the return itself reflects the relationship.</li>
         </ul>
       </div>
     </div>
@@ -813,6 +850,7 @@ footer{
         <div class="timeline-role">Senior Technical Recruiter · Data Platform & Distributed Systems</div>
         <ul class="timeline-bullets">
           <li>Sole recruiter — scaled 25 → 50 with weekly pipeline reviews with CEO, CTO, and Khosla Ventures</li>
+          <li>CEO departure triggered a strategic pivot and hiring pause; departed on strong terms and continued supporting Co-founder & CTO Vikram Joshi with warm referrals and sourcing guidance beyond the engagement.</li>
         </ul>
       </div>
     </div>
@@ -824,7 +862,7 @@ footer{
         <ul class="timeline-bullets">
           <li>600+ hires over 4 years at 50–80 reqs/month — ranked #1 globally in 2017 out of 300+ recruiters worldwide</li>
           <li>Reduced time-to-fill 90 → 30 days — designed global sourcing training for worldwide recruiter teams</li>
-          <li>24 Recognition Awards including "Truly One of a Kind Recruiter" from a Cisco Fellow with 600+ AI/ML patents</li>
+          <li>24 Recognition Awards including a Cisco Fellow award for closing critical AI/ML and Data Science roles for stealth projects, and 3 consecutive years recognized by the SVP/GM of the Enterprise Networking Org ($16B) for true partnership</li>
         </ul>
       </div>
     </div>

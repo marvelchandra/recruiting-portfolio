@@ -5,606 +5,521 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chandra Buduri — Recruiting Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#0A0A0F;
-  --ink2:#1C1C28;
-  --surface:#F5F3EE;
-  --surface2:#EDEAE3;
-  --accent:#1A3A5C;
-  --gold:#C8A96E;
-  --gold2:#E8C98E;
-  --teal:#1D7A6B;
-  --teal2:#2AA898;
-  --coral:#C45C3A;
-  --white:#FAFAF7;
-  --muted:#6B6860;
-  --border:rgba(10,10,15,0.1);
+  --cream:#F5F2EC;
+  --cream2:#EDE9E1;
+  --cream3:#E4DFD5;
+  --ink:#1A1714;
+  --ink2:#2C2820;
+  --ink3:#403A32;
+  --navy:#0E1520;
+  --navy2:#162030;
+  --gold:#9A7A3A;
+  --gold2:#C4A055;
+  --gold3:#DDB96A;
+  --teal:#0A6E56;
+  --teal2:#128A6C;
+  --coral:#8A3520;
+  --muted:#7A7068;
+  --muted2:#9A9088;
+  --border:rgba(26,23,20,0.08);
+  --border2:rgba(26,23,20,0.14);
 }
 
 html{scroll-behavior:smooth}
-
 body{
-  font-family:'DM Mono',monospace;
-  background:var(--surface);
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  background:var(--cream);
   color:var(--ink);
   overflow-x:hidden;
   cursor:none;
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
 }
 
-/* CUSTOM CURSOR */
 .cursor{
-  position:fixed;width:12px;height:12px;
-  background:var(--gold);border-radius:50%;
+  position:fixed;width:9px;height:9px;
+  background:var(--gold2);border-radius:50%;
   pointer-events:none;z-index:9999;
   transform:translate(-50%,-50%);
   transition:width 0.2s,height 0.2s,background 0.2s;
-  mix-blend-mode:multiply;
 }
 .cursor-ring{
-  position:fixed;width:36px;height:36px;
-  border:1.5px solid var(--accent);border-radius:50%;
+  position:fixed;width:30px;height:30px;
+  border:1px solid rgba(154,122,58,0.3);border-radius:50%;
   pointer-events:none;z-index:9998;
   transform:translate(-50%,-50%);
-  transition:all 0.12s ease;
-  opacity:0.6;
-}
-body:hover .cursor{opacity:1}
-
-/* NOISE TEXTURE OVERLAY */
-body::before{
-  content:'';position:fixed;inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events:none;z-index:1;opacity:0.4;
+  transition:all 0.1s ease;
 }
 
-/* HERO */
+/* ── HERO ── */
 .hero{
   min-height:100vh;
   display:grid;grid-template-rows:auto 1fr auto;
-  padding:0;
-  position:relative;
-  overflow:hidden;
-  background:var(--ink);
+  background:var(--navy);
+  position:relative;overflow:hidden;
 }
 
 .hero-bg{
   position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(29,122,107,0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 80% 20%, rgba(26,58,92,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 60% 80%, rgba(200,169,110,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 65% 55% at 12% 65%, rgba(18,138,108,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 65% at 88% 18%, rgba(14,21,32,0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 35% at 55% 88%, rgba(154,122,58,0.05) 0%, transparent 50%);
 }
 
-/* Animated grid lines */
 .hero-grid{
   position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
-  background-size:80px 80px;
-  animation:gridShift 20s linear infinite;
-}
-@keyframes gridShift{
-  0%{background-position:0 0}
-  100%{background-position:80px 80px}
+    linear-gradient(rgba(196,160,85,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,160,85,0.025) 1px, transparent 1px);
+  background-size:64px 64px;
 }
 
 .hero-nav{
   position:relative;z-index:10;
   display:flex;justify-content:space-between;align-items:center;
-  padding:32px 60px;
-  border-bottom:1px solid rgba(200,169,110,0.1);
+  padding:28px 64px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
 }
-
 .nav-logo{
-  font-family:'Syne',sans-serif;
-  font-size:13px;font-weight:700;
-  letter-spacing:0.2em;text-transform:uppercase;
-  color:var(--gold);
+  font-family:'DM Mono',monospace;
+  font-size:11px;letter-spacing:0.18em;
+  color:rgba(245,242,236,0.3);
 }
-
-.nav-links{
-  display:flex;gap:40px;
-  list-style:none;
-}
+.nav-links{display:flex;gap:36px;list-style:none;}
 .nav-links a{
-  font-size:11px;letter-spacing:0.15em;text-transform:uppercase;
-  color:rgba(250,250,247,0.5);text-decoration:none;
-  transition:color 0.2s;
+  font-size:12px;letter-spacing:0.06em;
+  color:rgba(245,242,236,0.3);text-decoration:none;
+  transition:color 0.2s;font-weight:400;
 }
-.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover{color:rgba(245,242,236,0.75)}
 
 .hero-content{
   position:relative;z-index:10;
   display:flex;flex-direction:column;justify-content:center;
-  padding:60px 60px 40px;
+  padding:52px 64px 40px;
 }
 
 .hero-eyebrow{
-  font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--teal2);margin-bottom:24px;
-  display:flex;align-items:center;gap:12px;
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--teal2);margin-bottom:30px;
+  display:flex;align-items:center;gap:14px;
+  opacity:0;animation:fadeUp 0.7s 0.2s ease forwards;
 }
-.hero-eyebrow::before{
-  content:'';display:block;width:40px;height:1px;background:var(--teal2);
-}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--teal2);opacity:0.5;}
 
 .hero-name{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(64px,8vw,120px);
-  font-weight:800;line-height:0.9;
-  color:var(--white);
-  letter-spacing:-0.03em;
-  margin-bottom:8px;
+  font-family:'Fraunces',serif;
+  font-size:clamp(54px,7.5vw,110px);
+  font-weight:300;line-height:0.92;
+  color:var(--cream);
+  letter-spacing:-0.025em;
+  margin-bottom:4px;
+  opacity:0;animation:fadeUp 0.7s 0.32s ease forwards;
 }
-
-.hero-name span{
-  display:block;
-  background:linear-gradient(135deg, var(--gold) 0%, var(--gold2) 50%, var(--gold) 100%);
-  background-size:200% auto;
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  animation:shimmer 4s linear infinite;
-}
-@keyframes shimmer{
-  0%{background-position:0% center}
-  100%{background-position:200% center}
+.hero-name-accent{
+  font-style:italic;color:var(--gold3);display:block;
 }
 
 .hero-title{
-  font-family:'Instrument Serif',serif;
-  font-style:italic;
-  font-size:clamp(18px,2.5vw,32px);
-  color:rgba(250,250,247,0.5);
-  margin-bottom:48px;
-  letter-spacing:0.01em;
+  font-family:'Fraunces',serif;font-weight:300;font-style:italic;
+  font-size:clamp(15px,1.8vw,21px);
+  color:rgba(245,242,236,0.3);
+  margin-bottom:48px;letter-spacing:0.01em;
+  opacity:0;animation:fadeUp 0.7s 0.44s ease forwards;
 }
 
 .hero-roles{
-  display:flex;flex-wrap:wrap;gap:10px;
-  margin-bottom:60px;
+  display:flex;flex-wrap:wrap;gap:7px;margin-bottom:0;
+  opacity:0;animation:fadeUp 0.7s 0.56s ease forwards;
 }
-
 .role-pill{
-  font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
-  padding:8px 20px;
-  border:1px solid rgba(200,169,110,0.25);
-  color:rgba(250,250,247,0.7);
-  border-radius:2px;
-  cursor:pointer;
-  transition:all 0.25s;
-  background:rgba(200,169,110,0.04);
+  font-size:11px;letter-spacing:0.06em;
+  padding:6px 16px;
+  border:1px solid rgba(245,242,236,0.08);
+  color:rgba(245,242,236,0.38);
+  border-radius:2px;cursor:pointer;
+  transition:all 0.2s;font-weight:400;
 }
 .role-pill:hover,.role-pill.active{
-  background:var(--gold);color:var(--ink);
-  border-color:var(--gold);
+  background:rgba(196,160,85,0.1);
+  color:var(--gold3);border-color:rgba(196,160,85,0.25);
 }
 
-/* STATS BAR */
+/* STATS */
 .stats-bar{
   position:relative;z-index:10;
   display:grid;grid-template-columns:repeat(5,1fr);
-  border-top:1px solid rgba(200,169,110,0.1);
+  border-top:1px solid rgba(255,255,255,0.04);
+  opacity:0;animation:fadeUp 0.7s 0.7s ease forwards;
 }
-
 .stat-item{
-  padding:28px 40px;
-  border-right:1px solid rgba(200,169,110,0.1);
-  position:relative;overflow:hidden;
+  padding:22px 36px;
+  border-right:1px solid rgba(255,255,255,0.04);
 }
 .stat-item:last-child{border-right:none}
-.stat-item::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--teal2),transparent);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform 0.5s ease;
-}
-.stat-item:hover::after{transform:scaleX(1)}
-
 .stat-num{
-  font-family:'Syne',sans-serif;font-size:36px;font-weight:800;
-  color:var(--gold);line-height:1;margin-bottom:6px;
+  font-family:'Fraunces',serif;
+  font-size:30px;font-weight:300;
+  color:var(--gold3);line-height:1;margin-bottom:5px;
 }
 .stat-label{
-  font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
-  color:rgba(250,250,247,0.35);
+  font-size:9px;letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(245,242,236,0.22);font-weight:400;
 }
 
-/* SECTIONS */
-section{
-  padding:120px 60px;
-  position:relative;
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
 }
+
+/* ── SECTIONS ── */
+section{padding:96px 64px;position:relative;}
 
 .section-label{
-  font-size:10px;letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:16px;
-  display:flex;align-items:center;gap:12px;
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;
 }
 .section-label::after{
-  content:'';flex:1;max-width:60px;height:1px;background:var(--gold);opacity:0.4;
+  content:'';flex:1;max-width:40px;height:1px;
+  background:var(--gold);opacity:0.25;
 }
 
 .section-heading{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(36px,4vw,56px);
-  font-weight:800;line-height:1.0;
-  letter-spacing:-0.02em;
-  margin-bottom:60px;
+  font-family:'Fraunces',serif;
+  font-size:clamp(30px,3.2vw,50px);
+  font-weight:300;line-height:1.06;
+  letter-spacing:-0.015em;margin-bottom:52px;
+  color:var(--ink);
 }
+.section-heading em{font-style:italic;color:var(--gold);}
 
-/* WHAT I DO — ROLE CARDS */
-.roles-section{background:var(--white)}
+/* ── ROLE CARDS ── */
+.roles-section{background:var(--cream2);}
+.roles-section .section-heading{color:var(--ink)}
 
 .role-cards{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:2px;
-  background:var(--border);
-  border:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--border);border:1px solid var(--border);
 }
-
 .role-card{
-  background:var(--white);
-  padding:48px;
-  position:relative;overflow:hidden;
-  cursor:pointer;
-  transition:background 0.3s;
+  background:var(--cream2);padding:44px;
+  position:relative;overflow:hidden;cursor:default;
+  transition:background 0.25s;
 }
 .role-card::before{
   content:'';position:absolute;
-  top:0;left:0;width:3px;height:0;
-  transition:height 0.4s ease;
+  top:0;left:0;width:2px;height:0;
+  transition:height 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 .role-card:nth-child(1)::before{background:var(--teal2)}
-.role-card:nth-child(2)::before{background:var(--gold)}
+.role-card:nth-child(2)::before{background:var(--gold2)}
 .role-card:nth-child(3)::before{background:var(--coral)}
-.role-card:nth-child(4)::before{background:var(--accent)}
+.role-card:nth-child(4)::before{background:var(--navy)}
 .role-card:hover::before{height:100%}
-.role-card:hover{background:var(--surface)}
+.role-card:hover{background:var(--cream)}
 
 .role-card-num{
-  font-family:'Syne',sans-serif;font-size:72px;font-weight:800;
-  color:rgba(10,10,15,0.04);
-  position:absolute;top:24px;right:32px;line-height:1;
+  font-family:'Fraunces',serif;font-size:52px;font-weight:300;
+  color:rgba(26,23,20,0.05);
+  position:absolute;top:18px;right:24px;line-height:1;font-style:italic;
 }
 .role-card-tag{
-  font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
-  margin-bottom:20px;
-  display:inline-block;padding:4px 12px;
-  border:1px solid var(--border);
-  color:var(--muted);
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  margin-bottom:16px;display:inline-block;color:var(--muted);
 }
 .role-card-title{
-  font-family:'Syne',sans-serif;font-size:22px;font-weight:700;
-  margin-bottom:16px;line-height:1.2;
+  font-family:'Fraunces',serif;
+  font-size:21px;font-weight:400;
+  margin-bottom:12px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);
 }
 .role-card-desc{
-  font-size:13px;line-height:1.8;color:var(--muted);
-  margin-bottom:24px;font-family:'DM Mono',monospace;
+  font-size:13px;line-height:1.75;color:var(--muted);
+  margin-bottom:20px;font-weight:400;
 }
-.role-card-companies{
-  display:flex;flex-wrap:wrap;gap:6px;
-}
+.role-card-companies{display:flex;flex-wrap:wrap;gap:5px;}
 .company-tag{
-  font-size:10px;letter-spacing:0.1em;
-  padding:3px 10px;background:var(--surface2);
-  color:var(--ink);border-radius:1px;
+  font-size:10px;letter-spacing:0.05em;
+  padding:3px 9px;background:var(--cream3);
+  color:var(--ink3);border-radius:2px;font-weight:500;
 }
 
-/* SOURCING — NETWORK VIZ */
-.sourcing-section{background:var(--ink);color:var(--white)}
-.sourcing-section .section-heading{color:var(--white)}
+/* ── SOURCING ── */
+.sourcing-section{background:var(--navy2);color:var(--cream);}
+.sourcing-section .section-heading{color:var(--cream);}
+.sourcing-section .section-heading em{color:var(--gold3);}
 
-.sourcing-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:60px;align-items:start;
-}
+.sourcing-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
 
-.sourcing-channels{
-  display:flex;flex-direction:column;gap:3px;
-}
-
-.channel-item{
-  display:flex;align-items:stretch;gap:0;
-  cursor:pointer;
-  transition:transform 0.2s;
-}
-.channel-item:hover{transform:translateX(8px)}
+.sourcing-channels{display:flex;flex-direction:column;gap:2px;}
+.channel-item{display:flex;align-items:stretch;gap:0;transition:transform 0.2s;}
+.channel-item:hover{transform:translateX(5px)}
 
 .channel-bar-wrap{
-  width:4px;flex-shrink:0;
-  background:rgba(200,169,110,0.1);
-  position:relative;overflow:hidden;
+  width:3px;flex-shrink:0;
+  background:rgba(245,242,236,0.04);position:relative;overflow:hidden;
 }
 .channel-bar-fill{
   position:absolute;bottom:0;left:0;right:0;
-  background:linear-gradient(0deg,var(--teal2),var(--gold));
-  transition:height 1s cubic-bezier(0.4,0,0.2,1);
-  height:0%;
+  background:linear-gradient(0deg,var(--teal2),var(--gold2));
+  transition:height 1.2s cubic-bezier(0.4,0,0.2,1);height:0%;
 }
 .channel-content{
-  flex:1;padding:16px 20px;
-  background:rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.04);
-  border-left:none;
+  flex:1;padding:13px 17px;
+  background:rgba(245,242,236,0.02);
+  border:1px solid rgba(245,242,236,0.04);border-left:none;
 }
-.channel-name{
-  font-family:'Syne',sans-serif;font-size:14px;font-weight:600;
-  color:var(--white);margin-bottom:4px;
-}
-.channel-desc{
-  font-size:11px;color:rgba(250,250,247,0.4);line-height:1.5;
-}
+.channel-name{font-size:13px;font-weight:500;color:var(--cream);margin-bottom:3px;}
+.channel-desc{font-size:11px;color:rgba(245,242,236,0.32);line-height:1.5;}
 .channel-signal{
-  font-size:10px;color:var(--gold);margin-top:6px;
-  letter-spacing:0.1em;text-transform:uppercase;
+  font-family:'DM Mono',monospace;
+  font-size:10px;color:var(--gold3);margin-top:4px;letter-spacing:0.06em;
 }
 
-/* NETWORK SVG VISUALIZATION */
-.network-viz{
-  position:sticky;top:80px;
-  height:480px;
-}
-
+.network-viz{position:sticky;top:80px;height:460px;}
 .network-viz svg{width:100%;height:100%}
 
-/* TIMELINE */
-.timeline-section{background:var(--surface)}
+/* ── TIMELINE ── */
+.timeline-section{background:var(--cream);}
+.timeline-section .section-heading{color:var(--ink)}
 
-.timeline{
-  position:relative;
-  padding-left:0;
-}
+.timeline{position:relative;}
 .timeline::before{
   content:'';position:absolute;
-  left:180px;top:0;bottom:0;width:1px;
-  background:linear-gradient(180deg,transparent,var(--gold),transparent);
+  left:155px;top:0;bottom:0;width:1px;
+  background:linear-gradient(180deg,transparent,rgba(154,122,58,0.2),transparent);
 }
 
 .timeline-item{
-  display:grid;grid-template-columns:180px 1fr;
-  gap:0;margin-bottom:0;
-  opacity:0;transform:translateY(20px);
-  transition:opacity 0.6s ease,transform 0.6s ease;
+  display:grid;grid-template-columns:155px 1fr;
+  opacity:0;transform:translateY(14px);
+  transition:opacity 0.5s ease,transform 0.5s ease;
 }
 .timeline-item.visible{opacity:1;transform:translateY(0)}
 
 .timeline-date{
-  padding:40px 40px 40px 0;
-  text-align:right;
-  font-size:11px;letter-spacing:0.15em;text-transform:uppercase;
-  color:var(--gold);
-  position:relative;
+  padding:34px 32px 34px 0;text-align:right;
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--gold);position:relative;
 }
 .timeline-date::after{
-  content:'';position:absolute;
-  right:-5px;top:47px;
-  width:9px;height:9px;
-  background:var(--gold);border-radius:50%;
-  box-shadow:0 0 0 4px var(--surface),0 0 0 5px var(--gold);
+  content:'';position:absolute;right:-4px;top:40px;
+  width:7px;height:7px;background:var(--gold2);border-radius:50%;
+  box-shadow:0 0 0 3px var(--cream),0 0 0 4px rgba(154,122,58,0.2);
 }
 
 .timeline-body{
-  padding:40px 0 40px 60px;
+  padding:34px 0 34px 50px;
   border-top:1px solid var(--border);
 }
 .timeline-item:first-child .timeline-body{border-top:none}
 
 .timeline-co{
-  font-family:'Syne',sans-serif;font-size:18px;font-weight:700;
-  margin-bottom:6px;
+  font-family:'Fraunces',serif;font-size:19px;font-weight:400;
+  margin-bottom:4px;letter-spacing:-0.01em;color:var(--ink);
 }
 .timeline-role{
-  font-size:12px;letter-spacing:0.1em;text-transform:uppercase;
-  color:var(--teal);margin-bottom:16px;
+  font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:13px;
 }
-.timeline-bullets{
-  list-style:none;display:flex;flex-direction:column;gap:8px;
-}
+.timeline-bullets{list-style:none;display:flex;flex-direction:column;gap:6px;}
 .timeline-bullets li{
-  font-size:13px;line-height:1.7;color:var(--muted);
-  padding-left:16px;position:relative;
+  font-size:13px;line-height:1.65;color:var(--muted);
+  padding-left:14px;position:relative;font-weight:400;
 }
 .timeline-bullets li::before{
-  content:'→';position:absolute;left:0;
-  color:var(--gold);font-size:11px;top:2px;
+  content:'—';position:absolute;left:0;
+  color:rgba(154,122,58,0.35);font-size:11px;top:1px;
 }
 
-/* TOOLS */
-.tools-section{background:var(--ink2);color:var(--white)}
-.tools-section .section-heading{color:var(--white)}
+/* ── TOOLS ── */
+.tools-section{background:var(--ink2);color:var(--cream);}
+.tools-section .section-heading{color:var(--cream);}
 
 .tools-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
-  background:rgba(255,255,255,0.04);
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(245,242,236,0.04);
 }
-.tool-group{
-  background:var(--ink2);
-  padding:40px;
-}
+.tool-group{background:var(--ink2);padding:34px;}
 .tool-group-label{
-  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:20px;
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold2);margin-bottom:14px;
 }
-.tool-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tool-tags{display:flex;flex-wrap:wrap;gap:5px;}
 .tool-tag{
-  font-size:11px;padding:5px 12px;
-  background:rgba(255,255,255,0.04);
-  color:rgba(250,250,247,0.7);
-  border:1px solid rgba(255,255,255,0.07);
-  border-radius:2px;
-  transition:all 0.2s;
-  cursor:default;
+  font-size:11px;padding:4px 10px;
+  background:rgba(245,242,236,0.03);
+  color:rgba(245,242,236,0.5);
+  border:1px solid rgba(245,242,236,0.06);
+  border-radius:2px;transition:all 0.2s;cursor:default;font-weight:400;
 }
 .tool-tag:hover{
-  background:var(--gold);color:var(--ink);
-  border-color:var(--gold);
+  background:rgba(196,160,85,0.08);
+  color:var(--gold3);border-color:rgba(196,160,85,0.18);
 }
 
-/* ASK ME */
-.ask-section{
-  background:var(--white);
-  text-align:center;
-}
+/* ── GITHUB CONTRIBUTIONS ── */
+.github-section{background:var(--cream2);}
+.github-section .section-heading{color:var(--ink)}
 
-.ask-container{
-  max-width:720px;margin:0 auto;
+.github-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);
+  margin-bottom:40px;
 }
-
-.ask-intro{
-  font-family:'Instrument Serif',serif;font-style:italic;
-  font-size:20px;color:var(--muted);
-  margin-bottom:40px;line-height:1.6;
-}
-
-.ask-chips{
-  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
-  margin-bottom:32px;
-}
-.ask-chip{
-  font-size:12px;padding:8px 18px;
-  border:1px solid var(--border);
-  color:var(--ink);border-radius:2px;cursor:pointer;
-  transition:all 0.2s;
-  font-family:'DM Mono',monospace;
-}
-.ask-chip:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-
-.ask-box{
-  display:flex;gap:0;
-  border:1px solid var(--ink);
-  margin-bottom:24px;
-}
-.ask-input{
-  flex:1;padding:18px 24px;
-  font-family:'DM Mono',monospace;font-size:14px;
-  border:none;outline:none;background:transparent;
-  color:var(--ink);
-}
-.ask-input::placeholder{color:var(--muted)}
-.ask-btn{
-  padding:18px 32px;
-  background:var(--ink);color:var(--white);
-  border:none;cursor:pointer;
-  font-family:'Syne',sans-serif;font-size:12px;
-  font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+.github-card{
+  background:var(--cream2);padding:32px;
   transition:background 0.2s;
 }
-.ask-btn:hover{background:var(--accent)}
-.ask-btn:disabled{opacity:0.5;cursor:not-allowed}
+.github-card:hover{background:var(--cream)}
+.github-card-icon{
+  font-size:20px;margin-bottom:14px;
+  color:var(--gold);font-family:'DM Mono',monospace;
+}
+.github-card-title{
+  font-family:'Fraunces',serif;font-size:16px;font-weight:400;
+  margin-bottom:8px;color:var(--ink);
+}
+.github-card-desc{font-size:12px;line-height:1.7;color:var(--muted);}
 
-.ask-response{
-  text-align:left;
-  padding:32px;
-  background:var(--surface);
-  border-left:3px solid var(--gold);
-  font-size:14px;line-height:1.8;color:var(--ink);
-  min-height:80px;
-  display:none;
-  white-space:pre-wrap;
+.github-links{display:flex;gap:10px;flex-wrap:wrap;}
+.github-link{
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.06em;padding:13px 28px;
+  text-decoration:none;transition:all 0.2s;display:inline-block;
+  border-radius:2px;
 }
-.ask-response.visible{display:block}
-
-.ask-typing{
-  display:inline-block;
-  width:8px;height:16px;
-  background:var(--gold);
-  animation:blink 0.8s step-end infinite;
-  vertical-align:text-bottom;
+.github-link-primary{
+  background:var(--ink);color:var(--cream);
 }
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-
-/* CTA */
-.cta-section{
-  background:var(--ink);
-  text-align:center;
-  padding:120px 60px;
+.github-link-primary:hover{background:var(--ink3)}
+.github-link-secondary{
+  border:1px solid var(--border2);color:var(--muted);
 }
-.cta-heading{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(40px,6vw,80px);
-  font-weight:800;line-height:0.95;
-  color:var(--white);
-  letter-spacing:-0.03em;
-  margin-bottom:32px;
-}
-.cta-heading em{
-  font-style:normal;
-  background:linear-gradient(135deg,var(--gold),var(--teal2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
-.cta-sub{
-  font-family:'Instrument Serif',serif;font-style:italic;
-  font-size:22px;color:rgba(250,250,247,0.45);
-  margin-bottom:56px;
-}
-.cta-links{
-  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
-}
-.cta-btn{
-  font-family:'Syne',sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:0.15em;text-transform:uppercase;
-  padding:18px 44px;text-decoration:none;
-  transition:all 0.25s;display:inline-block;
-}
-.cta-btn-primary{
-  background:var(--gold);color:var(--ink);
-}
-.cta-btn-primary:hover{background:var(--gold2)}
-.cta-btn-secondary{
-  border:1px solid rgba(200,169,110,0.3);
-  color:rgba(250,250,247,0.7);
-}
-.cta-btn-secondary:hover{
+.github-link-secondary:hover{
   border-color:var(--gold);color:var(--gold);
 }
 
-/* FOOTER */
+/* ── ASK ME ── */
+.ask-section{background:var(--cream);text-align:center;}
+.ask-container{max-width:660px;margin:0 auto;}
+
+.ask-intro{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:17px;color:var(--muted);
+  margin-bottom:32px;line-height:1.65;font-weight:300;
+}
+.ask-chips{
+  display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:24px;
+}
+.ask-chip{
+  font-size:12px;padding:6px 14px;
+  border:1px solid var(--border2);color:var(--muted);
+  border-radius:2px;cursor:pointer;transition:all 0.2s;font-weight:400;
+}
+.ask-chip:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+
+.ask-box{
+  display:flex;gap:0;border:1px solid var(--border2);
+  margin-bottom:16px;transition:border-color 0.2s;
+}
+.ask-box:focus-within{border-color:var(--ink)}
+.ask-input{
+  flex:1;padding:15px 18px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:400;
+  border:none;outline:none;background:transparent;color:var(--ink);
+}
+.ask-input::placeholder{color:var(--muted);opacity:0.5}
+.ask-btn{
+  padding:15px 26px;background:var(--ink);color:var(--cream);
+  border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;
+  transition:background 0.2s;white-space:nowrap;
+}
+.ask-btn:hover{background:var(--ink3)}
+.ask-btn:disabled{opacity:0.4;cursor:not-allowed}
+
+.ask-status{
+  font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);
+  margin-bottom:6px;letter-spacing:0.05em;min-height:14px;
+}
+.ask-response{
+  text-align:left;padding:26px 30px;
+  background:var(--cream2);border-left:2px solid var(--gold);
+  font-size:14px;line-height:1.8;color:var(--ink);
+  display:none;font-weight:400;
+}
+.ask-response.visible{display:block}
+
+/* ── CTA ── */
+.cta-section{background:var(--navy);text-align:center;padding:96px 64px;}
+.cta-heading{
+  font-family:'Fraunces',serif;
+  font-size:clamp(34px,5vw,66px);
+  font-weight:300;line-height:1.0;
+  color:var(--cream);letter-spacing:-0.02em;margin-bottom:20px;
+}
+.cta-heading em{font-style:italic;color:var(--gold3);}
+.cta-sub{
+  font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+  font-size:17px;color:rgba(245,242,236,0.32);
+  margin-bottom:44px;line-height:1.6;
+}
+.cta-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.cta-btn{
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.07em;padding:14px 32px;
+  text-decoration:none;transition:all 0.2s;display:inline-block;border-radius:2px;
+}
+.cta-btn-primary{background:var(--gold2);color:var(--ink);}
+.cta-btn-primary:hover{background:var(--gold3)}
+.cta-btn-secondary{
+  border:1px solid rgba(245,242,236,0.1);color:rgba(245,242,236,0.45);
+}
+.cta-btn-secondary:hover{border-color:rgba(196,160,85,0.35);color:var(--gold3);}
+
 footer{
-  background:var(--ink2);
-  padding:32px 60px;
+  background:var(--ink);padding:22px 64px;
   display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid rgba(255,255,255,0.04);
+  border-top:1px solid rgba(245,242,236,0.04);
 }
-.footer-left{
-  font-size:11px;letter-spacing:0.1em;
-  color:rgba(250,250,247,0.2);
-}
-.footer-right{
-  font-size:11px;letter-spacing:0.1em;
-  color:rgba(250,250,247,0.2);
+.footer-text{
+  font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;
+  color:rgba(245,242,236,0.12);
 }
 
-/* SCROLL REVEAL */
-.reveal{
-  opacity:0;transform:translateY(32px);
-  transition:opacity 0.7s ease,transform 0.7s ease;
-}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* SCROLLBAR */
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--surface)}
-::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--gold2);border-radius:2px}
 
 @media(max-width:768px){
-  .hero-nav{padding:24px 24px}
-  .hero-content{padding:40px 24px}
-  .hero-name{font-size:52px}
-  section{padding:80px 24px}
+  .hero-nav,.hero-content,section,.cta-section,footer{padding-left:24px;padding-right:24px}
+  .hero-name{font-size:50px}
   .stats-bar{grid-template-columns:repeat(2,1fr)}
   .stat-item:nth-child(5){grid-column:span 2}
-  .role-cards{grid-template-columns:1fr}
-  .sourcing-grid{grid-template-columns:1fr}
+  .role-cards,.sourcing-grid,.tools-grid,.github-cards{grid-template-columns:1fr}
   .network-viz{display:none}
   .timeline::before{left:0}
   .timeline-item{grid-template-columns:1fr}
-  .timeline-date{text-align:left;padding:32px 0 0}
+  .timeline-date{text-align:left;padding:24px 0 0}
   .timeline-date::after{display:none}
-  .timeline-body{padding:16px 0 32px}
-  .tools-grid{grid-template-columns:1fr}
-  footer{flex-direction:column;gap:12px;text-align:center}
+  .timeline-body{padding:10px 0 24px;border-top:none}
+  footer{flex-direction:column;gap:8px;text-align:center}
   .nav-links{display:none}
 }
 </style>
@@ -618,22 +533,19 @@ footer{
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-
   <nav class="hero-nav">
-    <div class="nav-logo">CB · Portfolio</div>
+    <div class="nav-logo">CB · Portfolio · 2026</div>
     <ul class="nav-links">
       <li><a href="#roles">What I Do</a></li>
       <li><a href="#sourcing">Sourcing</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#github">GitHub</a></li>
       <li><a href="#ask">Ask Me</a></li>
     </ul>
   </nav>
-
   <div class="hero-content">
     <div class="hero-eyebrow">Recruiting Portfolio · San Francisco Bay Area</div>
-    <h1 class="hero-name">
-      Chandra<span>Buduri</span>
-    </h1>
+    <h1 class="hero-name">Chandra<span class="hero-name-accent">Buduri</span></h1>
     <p class="hero-title">The recruiter who finds candidates others don't know exist</p>
     <div class="hero-roles">
       <span class="role-pill active">Founding Recruiter</span>
@@ -643,108 +555,77 @@ footer{
       <span class="role-pill">AI/ML · Semiconductor · Infrastructure</span>
     </div>
   </div>
-
   <div class="stats-bar">
-    <div class="stat-item">
-      <div class="stat-num" data-target="600">0</div>
-      <div class="stat-label">Total Hires Closed</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num" data-target="15">0</div>
-      <div class="stat-label">Companies Scaled</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num" data-suffix="%">40</div>
-      <div class="stat-label">Avg TTH Reduction</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num" data-target="5">0</div>
-      <div class="stat-label">0→1 Founding Roles</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num" data-target="10">0</div>
-      <div class="stat-label">Countries Hired Across</div>
-    </div>
+    <div class="stat-item"><div class="stat-num" data-target="600" data-suffix="+">0+</div><div class="stat-label">Total hires closed</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="15" data-suffix="+">0+</div><div class="stat-label">Companies scaled</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="40" data-suffix="%">0%</div><div class="stat-label">Avg TTH reduction</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="5" data-suffix="+">0+</div><div class="stat-label">Founding roles</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="10" data-suffix="+">0+</div><div class="stat-label">Countries hired across</div></div>
   </div>
 </section>
 
 <!-- WHAT I DO -->
 <section class="roles-section" id="roles">
-  <div class="section-label">What I Do</div>
-  <h2 class="section-heading reveal">Four modes.<br>One recruiter.</h2>
-
+  <div class="section-label">What I do</div>
+  <h2 class="section-heading reveal">Four modes.<br><em>One recruiter.</em></h2>
   <div class="role-cards reveal">
     <div class="role-card">
       <div class="role-card-num">01</div>
-      <div class="role-card-tag">First In-House Hire</div>
+      <div class="role-card-tag">First in-house hire</div>
       <h3 class="role-card-title">Founding Recruiter</h3>
-      <p class="role-card-desc">I'm brought in when there's no process, no pipeline, and a hard role that needed to be filled yesterday. I build the infrastructure that outlasts me — ATS, loops, scorecards, comp frameworks, and playbooks from zero.</p>
+      <p class="role-card-desc">Brought in when there's no process, no pipeline, and a hard role that needed to be filled yesterday. I build the infrastructure that outlasts me — ATS, loops, scorecards, comp frameworks, and playbooks from zero.</p>
       <div class="role-card-companies">
-        <span class="company-tag">Arrcus</span>
-        <span class="company-tag">Factory VC Portfolio</span>
-        <span class="company-tag">Astera Labs</span>
-        <span class="company-tag">StormX</span>
+        <span class="company-tag">Arrcus</span><span class="company-tag">Factory VC Portfolio</span>
+        <span class="company-tag">Astera Labs</span><span class="company-tag">StormX</span>
         <span class="company-tag">Seed-stage (confidential)</span>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-card-num">02</div>
-      <div class="role-card-tag">Strategy & Leadership</div>
+      <div class="role-card-tag">Strategy & leadership</div>
       <h3 class="role-card-title">Head of Talent / TA Lead</h3>
       <p class="role-card-desc">Recruiting strategy, team leadership, headcount planning, and executive stakeholder alignment. I partner with CEOs and founders as a talent advisor — not just an executor — with weekly KPI reporting and market intelligence.</p>
       <div class="role-card-companies">
-        <span class="company-tag">Cisco</span>
-        <span class="company-tag">Arrcus Series D</span>
-        <span class="company-tag">Factory VC</span>
+        <span class="company-tag">Cisco</span><span class="company-tag">Arrcus Series D</span><span class="company-tag">Factory VC</span>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-card-num">03</div>
-      <div class="role-card-tag">Deep Tech · Full-Cycle</div>
+      <div class="role-card-tag">Deep tech · full-cycle</div>
       <h3 class="role-card-title">Senior Technical Recruiter</h3>
       <p class="role-card-desc">Full-cycle IC hiring across AI/ML, semiconductor, hardware, cloud infrastructure, and distributed systems. I find passive candidates where they actually live — ArXiv, GitHub, IEEE Xplore, patent databases, conference proceedings.</p>
       <div class="role-card-companies">
-        <span class="company-tag">Cisco</span>
-        <span class="company-tag">CommScope</span>
-        <span class="company-tag">Arrcus</span>
-        <span class="company-tag">Xcalar</span>
-        <span class="company-tag">Astera Labs</span>
+        <span class="company-tag">Cisco</span><span class="company-tag">CommScope</span>
+        <span class="company-tag">Arrcus</span><span class="company-tag">Xcalar</span><span class="company-tag">Astera Labs</span>
       </div>
     </div>
-
     <div class="role-card">
       <div class="role-card-num">04</div>
-      <div class="role-card-tag">Revenue & Operations</div>
+      <div class="role-card-tag">Revenue & operations</div>
       <h3 class="role-card-title">GTM & G&A Recruiter</h3>
-      <p class="role-card-desc">Sales (AE/SMB/MM/Enterprise), Solutions Engineering, Pre-Sales, Channel, CS, Marketing, RevOps, Finance, Legal, and Operations. Technical fluency makes me sharper on SE and TAM calibration than most GTM recruiters.</p>
+      <p class="role-card-desc">Sales, Solutions Engineering, Pre-Sales, Channel, CS, Marketing, RevOps, Finance, Legal, and Operations. Technical fluency makes me sharper on SE and TAM calibration than most GTM recruiters.</p>
       <div class="role-card-companies">
-        <span class="company-tag">All of the above</span>
-        <span class="company-tag">Cross-functional every time</span>
+        <span class="company-tag">All of the above</span><span class="company-tag">Cross-functional every time</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOURCING DEPTH -->
+<!-- SOURCING -->
 <section class="sourcing-section" id="sourcing">
-  <div class="section-label">Sourcing Depth</div>
-  <h2 class="section-heading reveal">Where I find<br>candidates others don't.</h2>
-
+  <div class="section-label">Sourcing depth</div>
+  <h2 class="section-heading reveal">Where I find candidates<br><em>others don't know exist.</em></h2>
   <div class="sourcing-grid">
     <div class="sourcing-channels reveal" id="sourcingChannels">
-
       <div class="channel-item" data-pct="97">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
           <div class="channel-name">ArXiv · Papers With Code · Google Scholar</div>
-          <div class="channel-desc">Author pages, citation networks, co-author maps. Finds researchers before they're on LinkedIn.</div>
+          <div class="channel-desc">Author pages, citation networks, co-author maps. Finds researchers before they appear on LinkedIn.</div>
           <div class="channel-signal">→ AI/ML Research · PhD pipelines</div>
         </div>
       </div>
-
-      <div class="channel-item" data-pct="92">
+      <div class="channel-item" data-pct="93">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
           <div class="channel-name">GitHub API · OSS Contributor Mining</div>
@@ -752,7 +633,6 @@ footer{
           <div class="channel-signal">→ ML Infra · Systems · Compiler engineers</div>
         </div>
       </div>
-
       <div class="channel-item" data-pct="88">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
@@ -761,8 +641,7 @@ footer{
           <div class="channel-signal">→ Semiconductor · Hardware · ASIC/PCIe</div>
         </div>
       </div>
-
-      <div class="channel-item" data-pct="85">
+      <div class="channel-item" data-pct="83">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
           <div class="channel-name">OpenReview · NeurIPS · ICML · ICLR</div>
@@ -770,26 +649,23 @@ footer{
           <div class="channel-signal">→ Research Scientists · ML Engineers</div>
         </div>
       </div>
-
-      <div class="channel-item" data-pct="80">
+      <div class="channel-item" data-pct="78">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
           <div class="channel-name">University Lab Pages · ORCID · ResearchGate</div>
-          <div class="channel-desc">PhD students, postdocs, and research staff not on LinkedIn. Direct faculty relationships at 10+ universities.</div>
+          <div class="channel-desc">PhD students and postdocs not on LinkedIn. Direct faculty relationships at 10+ universities.</div>
           <div class="channel-signal">→ PhD pipelines · Research roles</div>
         </div>
       </div>
-
-      <div class="channel-item" data-pct="75">
+      <div class="channel-item" data-pct="73">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
           <div class="channel-name">X-Ray Boolean · Resume Mining · PDL API</div>
-          <div class="channel-desc">Google-crawling LinkedIn, GitHub, university pages, and CV hosting sites for profiles outside network reach.</div>
+          <div class="channel-desc">Google-crawling LinkedIn, GitHub, and university pages for profiles outside standard network reach.</div>
           <div class="channel-signal">→ All technical roles · Passive candidates</div>
         </div>
       </div>
-
-      <div class="channel-item" data-pct="70">
+      <div class="channel-item" data-pct="67">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
           <div class="channel-name">Kaggle · HuggingFace · Discord Communities</div>
@@ -797,163 +673,106 @@ footer{
           <div class="channel-signal">→ Applied ML · LLM engineers · MLOps</div>
         </div>
       </div>
-
     </div>
-
-    <!-- NETWORK VIZ -->
     <div class="network-viz reveal">
-      <svg viewBox="0 0 440 480" xmlns="http://www.w3.org/2000/svg" id="networkSvg">
+      <svg viewBox="0 0 440 480" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#C8A96E" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#C8A96E" stop-opacity="0"/>
+          <radialGradient id="cg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#C4A055" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#C4A055" stop-opacity="0"/>
           </radialGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
+          <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
-
-        <!-- Connection lines -->
-        <g stroke="rgba(200,169,110,0.15)" stroke-width="1" fill="none">
-          <line x1="220" y1="240" x2="100" y2="100" class="net-line"/>
-          <line x1="220" y1="240" x2="340" y2="100" class="net-line"/>
-          <line x1="220" y1="240" x2="80" y2="240" class="net-line"/>
-          <line x1="220" y1="240" x2="360" y2="240" class="net-line"/>
-          <line x1="220" y1="240" x2="100" y2="380" class="net-line"/>
-          <line x1="220" y1="240" x2="340" y2="380" class="net-line"/>
-          <line x1="220" y1="240" x2="220" y2="60" class="net-line"/>
-          <line x1="100" y1="100" x2="220" y2="60" class="net-line"/>
-          <line x1="340" y1="100" x2="220" y2="60" class="net-line"/>
-          <line x1="80" y1="240" x2="100" y2="100" class="net-line"/>
-          <line x1="80" y1="240" x2="100" y2="380" class="net-line"/>
-          <line x1="360" y1="240" x2="340" y2="100" class="net-line"/>
-          <line x1="360" y1="240" x2="340" y2="380" class="net-line"/>
+        <g stroke="rgba(196,160,85,0.08)" stroke-width="1" fill="none">
+          <line x1="220" y1="240" x2="110" y2="90"/>
+          <line x1="220" y1="240" x2="330" y2="90"/>
+          <line x1="220" y1="240" x2="75" y2="240"/>
+          <line x1="220" y1="240" x2="365" y2="240"/>
+          <line x1="220" y1="240" x2="110" y2="390"/>
+          <line x1="220" y1="240" x2="330" y2="390"/>
+          <line x1="220" y1="240" x2="220" y2="55"/>
+          <line x1="110" y1="90" x2="220" y2="55"/>
+          <line x1="330" y1="90" x2="220" y2="55"/>
         </g>
-
-        <!-- Outer nodes -->
         <g filter="url(#glow)">
-          <!-- Top center -->
-          <circle cx="220" cy="60" r="28" fill="rgba(29,122,107,0.15)" stroke="#2AA898" stroke-width="1"/>
-          <text x="220" y="54" text-anchor="middle" fill="#2AA898" font-family="DM Mono" font-size="8" font-weight="500">ArXiv</text>
-          <text x="220" y="66" text-anchor="middle" fill="rgba(170,222,218,0.6)" font-family="DM Mono" font-size="7">Papers·Scholar</text>
-
-          <!-- Top left -->
-          <circle cx="100" cy="100" r="24" fill="rgba(200,169,110,0.1)" stroke="#C8A96E" stroke-width="1"/>
-          <text x="100" y="94" text-anchor="middle" fill="#C8A96E" font-family="DM Mono" font-size="8">GitHub</text>
-          <text x="100" y="106" text-anchor="middle" fill="rgba(200,169,110,0.6)" font-family="DM Mono" font-size="7">API Mining</text>
-
-          <!-- Top right -->
-          <circle cx="340" cy="100" r="24" fill="rgba(196,92,58,0.1)" stroke="#C45C3A" stroke-width="1"/>
-          <text x="340" y="94" text-anchor="middle" fill="#C45C3A" font-family="DM Mono" font-size="8">IEEE</text>
-          <text x="340" y="106" text-anchor="middle" fill="rgba(196,92,58,0.6)" font-family="DM Mono" font-size="7">Patents</text>
-
-          <!-- Mid left -->
-          <circle cx="80" cy="240" r="26" fill="rgba(26,58,92,0.2)" stroke="#4A7AA8" stroke-width="1"/>
-          <text x="80" y="234" text-anchor="middle" fill="#7AAED4" font-family="DM Mono" font-size="8">X-Ray</text>
-          <text x="80" y="246" text-anchor="middle" fill="rgba(122,174,212,0.6)" font-family="DM Mono" font-size="7">Boolean</text>
-
-          <!-- Mid right -->
-          <circle cx="360" cy="240" r="26" fill="rgba(29,122,107,0.1)" stroke="#2AA898" stroke-width="1"/>
-          <text x="360" y="234" text-anchor="middle" fill="#2AA898" font-family="DM Mono" font-size="8">OpenReview</text>
-          <text x="360" y="246" text-anchor="middle" fill="rgba(42,168,152,0.6)" font-family="DM Mono" font-size="7">Conferences</text>
-
-          <!-- Bot left -->
-          <circle cx="100" cy="380" r="22" fill="rgba(200,169,110,0.08)" stroke="#C8A96E" stroke-width="1" stroke-dasharray="3,2"/>
-          <text x="100" y="374" text-anchor="middle" fill="#C8A96E" font-family="DM Mono" font-size="8">Kaggle</text>
-          <text x="100" y="386" text-anchor="middle" fill="rgba(200,169,110,0.5)" font-family="DM Mono" font-size="7">HuggingFace</text>
-
-          <!-- Bot right -->
-          <circle cx="340" cy="380" r="22" fill="rgba(26,58,92,0.15)" stroke="#4A7AA8" stroke-width="1" stroke-dasharray="3,2"/>
-          <text x="340" y="374" text-anchor="middle" fill="#7AAED4" font-family="DM Mono" font-size="8">ORCID</text>
-          <text x="340" y="386" text-anchor="middle" fill="rgba(122,174,212,0.5)" font-family="DM Mono" font-size="7">Uni Labs</text>
+          <circle cx="220" cy="55" r="26" fill="rgba(18,138,108,0.06)" stroke="rgba(18,138,108,0.35)" stroke-width="1"/>
+          <text x="220" y="50" text-anchor="middle" fill="rgba(18,138,108,0.85)" font-family="Inter" font-size="8" font-weight="500">ArXiv</text>
+          <text x="220" y="63" text-anchor="middle" fill="rgba(18,138,108,0.45)" font-family="DM Mono" font-size="7">Papers·Scholar</text>
+          <circle cx="110" cy="90" r="22" fill="rgba(196,160,85,0.05)" stroke="rgba(196,160,85,0.3)" stroke-width="1"/>
+          <text x="110" y="85" text-anchor="middle" fill="rgba(196,160,85,0.85)" font-family="Inter" font-size="8" font-weight="500">GitHub</text>
+          <text x="110" y="98" text-anchor="middle" fill="rgba(196,160,85,0.45)" font-family="DM Mono" font-size="7">API</text>
+          <circle cx="330" cy="90" r="22" fill="rgba(138,53,32,0.05)" stroke="rgba(138,53,32,0.3)" stroke-width="1"/>
+          <text x="330" y="85" text-anchor="middle" fill="rgba(200,100,70,0.85)" font-family="Inter" font-size="8" font-weight="500">IEEE</text>
+          <text x="330" y="98" text-anchor="middle" fill="rgba(200,100,70,0.45)" font-family="DM Mono" font-size="7">Patents</text>
+          <circle cx="75" cy="240" r="24" fill="rgba(14,21,32,0.15)" stroke="rgba(100,140,180,0.3)" stroke-width="1"/>
+          <text x="75" y="235" text-anchor="middle" fill="rgba(140,180,215,0.85)" font-family="Inter" font-size="8" font-weight="500">X-Ray</text>
+          <text x="75" y="248" text-anchor="middle" fill="rgba(140,180,215,0.45)" font-family="DM Mono" font-size="7">Boolean</text>
+          <circle cx="365" cy="240" r="24" fill="rgba(18,138,108,0.05)" stroke="rgba(18,138,108,0.25)" stroke-width="1"/>
+          <text x="365" y="235" text-anchor="middle" fill="rgba(18,138,108,0.85)" font-family="Inter" font-size="7" font-weight="500">OpenReview</text>
+          <text x="365" y="248" text-anchor="middle" fill="rgba(18,138,108,0.45)" font-family="DM Mono" font-size="7">Conferences</text>
+          <circle cx="110" cy="390" r="20" fill="rgba(196,160,85,0.04)" stroke="rgba(196,160,85,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="110" y="385" text-anchor="middle" fill="rgba(196,160,85,0.65)" font-family="Inter" font-size="8" font-weight="500">Kaggle</text>
+          <text x="110" y="398" text-anchor="middle" fill="rgba(196,160,85,0.35)" font-family="DM Mono" font-size="7">HuggingFace</text>
+          <circle cx="330" cy="390" r="20" fill="rgba(14,21,32,0.08)" stroke="rgba(100,140,180,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="330" y="385" text-anchor="middle" fill="rgba(140,180,215,0.65)" font-family="Inter" font-size="8" font-weight="500">ORCID</text>
+          <text x="330" y="398" text-anchor="middle" fill="rgba(140,180,215,0.35)" font-family="DM Mono" font-size="7">Uni Labs</text>
         </g>
-
-        <!-- CENTER NODE — CHANDRA -->
-        <circle cx="220" cy="240" r="50" fill="url(#nodeGlow)"/>
-        <circle cx="220" cy="240" r="44" fill="rgba(10,10,15,0.9)" stroke="#C8A96E" stroke-width="1.5"/>
-        <circle cx="220" cy="240" r="38" fill="none" stroke="rgba(200,169,110,0.2)" stroke-width="1" stroke-dasharray="4,3">
-          <animateTransform attributeName="transform" type="rotate" from="0 220 240" to="360 220 240" dur="20s" repeatCount="indefinite"/>
+        <circle cx="220" cy="240" r="48" fill="url(#cg)"/>
+        <circle cx="220" cy="240" r="42" fill="rgba(10,12,18,0.96)" stroke="rgba(196,160,85,0.3)" stroke-width="1"/>
+        <circle cx="220" cy="240" r="36" fill="none" stroke="rgba(196,160,85,0.08)" stroke-width="1" stroke-dasharray="3,3">
+          <animateTransform attributeName="transform" type="rotate" from="0 220 240" to="360 220 240" dur="28s" repeatCount="indefinite"/>
         </circle>
-        <text x="220" y="232" text-anchor="middle" fill="#C8A96E" font-family="Syne" font-size="11" font-weight="700">CHANDRA</text>
-        <text x="220" y="246" text-anchor="middle" fill="rgba(200,169,110,0.6)" font-family="DM Mono" font-size="8">BUDURI</text>
-        <text x="220" y="260" text-anchor="middle" fill="rgba(250,250,247,0.3)" font-family="DM Mono" font-size="7">600+ hires</text>
-
-        <!-- Pulsing ring animation -->
-        <circle cx="220" cy="240" r="44" fill="none" stroke="rgba(200,169,110,0.3)" stroke-width="1">
-          <animate attributeName="r" values="44;70;44" dur="3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+        <text x="220" y="233" text-anchor="middle" fill="rgba(196,160,85,0.85)" font-family="Fraunces" font-size="11" font-weight="300" font-style="italic">Chandra</text>
+        <text x="220" y="248" text-anchor="middle" fill="rgba(196,160,85,0.4)" font-family="DM Mono" font-size="8">600+ hires</text>
+        <circle cx="220" cy="240" r="42" fill="none" stroke="rgba(196,160,85,0.1)" stroke-width="1">
+          <animate attributeName="r" values="42;62;42" dur="5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.1;0;0.1" dur="5s" repeatCount="indefinite"/>
         </circle>
-
-        <!-- Floating dots on lines -->
-        <circle r="3" fill="#C8A96E" opacity="0.7">
-          <animateMotion dur="4s" repeatCount="indefinite">
-            <mpath href="#path1"/>
-          </animateMotion>
-        </circle>
-        <path id="path1" d="M220,240 L100,100" fill="none"/>
-
-        <circle r="3" fill="#2AA898" opacity="0.7">
-          <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
-            <mpath href="#path2"/>
-          </animateMotion>
-        </circle>
-        <path id="path2" d="M220,240 L340,100" fill="none"/>
-
-        <circle r="3" fill="#C45C3A" opacity="0.7">
-          <animateMotion dur="6s" repeatCount="indefinite" begin="2s">
-            <mpath href="#path3"/>
-          </animateMotion>
-        </circle>
-        <path id="path3" d="M220,240 L360,240" fill="none"/>
-
-        <circle r="3" fill="#7AAED4" opacity="0.7">
-          <animateMotion dur="4.5s" repeatCount="indefinite" begin="0.5s">
-            <mpath href="#path4"/>
-          </animateMotion>
-        </circle>
-        <path id="path4" d="M220,240 L80,240" fill="none"/>
-
+        <circle r="2.5" fill="rgba(196,160,85,0.7)"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+        <path id="p1" d="M220,240 L110,90" fill="none"/>
+        <circle r="2.5" fill="rgba(18,138,108,0.7)"><animateMotion dur="6.5s" repeatCount="indefinite" begin="1.5s"><mpath href="#p2"/></animateMotion></circle>
+        <path id="p2" d="M220,240 L330,90" fill="none"/>
+        <circle r="2.5" fill="rgba(140,180,215,0.7)"><animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s"><mpath href="#p3"/></animateMotion></circle>
+        <path id="p3" d="M220,240 L365,240" fill="none"/>
+        <circle r="2.5" fill="rgba(200,100,70,0.7)"><animateMotion dur="4.5s" repeatCount="indefinite" begin="2.2s"><mpath href="#p4"/></animateMotion></circle>
+        <path id="p4" d="M220,240 L75,240" fill="none"/>
       </svg>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE TIMELINE -->
+<!-- TIMELINE -->
 <section class="timeline-section" id="experience">
-  <div class="section-label">Career Timeline</div>
-  <h2 class="section-heading reveal">Built from scratch.<br>Every time.</h2>
-
+  <div class="section-label">Career timeline</div>
+  <h2 class="section-heading reveal">Built from scratch.<br><em>Every time.</em></h2>
   <div class="timeline">
-
     <div class="timeline-item">
-      <div class="timeline-date">2024 – 2026</div>
+      <div class="timeline-date">2024–2026</div>
       <div class="timeline-body">
         <div class="timeline-co">CommScope → Vistance Networks</div>
         <div class="timeline-role">Senior Recruiter · Enterprise Networking & Cloud Infrastructure</div>
         <ul class="timeline-bullets">
-          <li>100+ hires in 12 months as sole recruiter across 4-company acquisition (CommScope, Ruckus, Aurora, Amphenol)</li>
+          <li>100+ hires in 12 months as sole recruiter across a 4-company acquisition spanning CommScope, Ruckus, Aurora, and Amphenol</li>
           <li>Deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%</li>
           <li>Built SuccessFactors dashboards giving SVPs real-time visibility into funnel health and hiring velocity</li>
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">2023 – 2024</div>
+      <div class="timeline-date">2023–2024</div>
       <div class="timeline-body">
         <div class="timeline-co">Independent — Seed to Pre-IPO</div>
         <div class="timeline-role">Founding Recruiter · Astera Labs · StormX · AptonShops · Confidential</div>
         <ul class="timeline-bullets">
           <li>Sole recruiter per engagement — closed ASIC/FPGA, PCIe/CXL, AI/ML, Full-Stack, and GTM roles across US, Canada, India, EMEA</li>
-          <li>Built 0→1 recruiting infrastructure (ATS, scorecards, comp frameworks, 90-day playbooks) from scratch for each client</li>
+          <li>Built 0→1 recruiting infrastructure from scratch for each client — ATS, scorecards, comp frameworks, 90-day playbooks</li>
           <li>Cut time-to-hire ~35% through high-signal sourcing, structured loops, and weekly founder syncs</li>
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">2022 – 2023</div>
+      <div class="timeline-date">2022–2023</div>
       <div class="timeline-body">
         <div class="timeline-co">Arrcus, Inc. — Series D</div>
         <div class="timeline-role">Head of Talent Acquisition · Cloud Networking & Infrastructure</div>
@@ -964,9 +783,8 @@ footer{
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">2021 – 2022</div>
+      <div class="timeline-date">2021–2022</div>
       <div class="timeline-body">
         <div class="timeline-co">Factory — Venture Capital</div>
         <div class="timeline-role">Head of Talent Acquisition · Seed-Stage Portfolio</div>
@@ -977,9 +795,8 @@ footer{
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">2020 – 2021</div>
+      <div class="timeline-date">2020–2021</div>
       <div class="timeline-body">
         <div class="timeline-co">Arrcus, Inc. — Series B–D</div>
         <div class="timeline-role">Founding Senior Recruiter · Cloud Networking</div>
@@ -989,9 +806,8 @@ footer{
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">2019 – 2020</div>
+      <div class="timeline-date">2019–2020</div>
       <div class="timeline-body">
         <div class="timeline-co">Xcalar, Inc. — Series A</div>
         <div class="timeline-role">Senior Technical Recruiter · Data Platform & Distributed Systems</div>
@@ -1000,9 +816,8 @@ footer{
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">2015 – 2019</div>
+      <div class="timeline-date">2015–2019</div>
       <div class="timeline-body">
         <div class="timeline-co">Cisco Systems</div>
         <div class="timeline-role">Senior Technical Recruiter → TA Lead · Enterprise, Security & Cloud</div>
@@ -1013,162 +828,113 @@ footer{
         </ul>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- TOOLS -->
 <section class="tools-section">
-  <div class="section-label">Tools & Stack</div>
-  <h2 class="section-heading reveal">The full stack.<br>From sourcing to close.</h2>
+  <div class="section-label">Tools & stack</div>
+  <h2 class="section-heading reveal" style="color:var(--cream)">The full stack.<br><em>From sourcing to close.</em></h2>
   <div class="tools-grid reveal">
-    <div class="tool-group">
-      <div class="tool-group-label">ATS / CRM</div>
-      <div class="tool-tags">
-        <span class="tool-tag">Greenhouse</span>
-        <span class="tool-tag">Lever</span>
-        <span class="tool-tag">Ashby</span>
-        <span class="tool-tag">SuccessFactors</span>
-        <span class="tool-tag">Avature</span>
-        <span class="tool-tag">Workable</span>
-        <span class="tool-tag">JazzHR</span>
-      </div>
+    <div class="tool-group"><div class="tool-group-label">ATS / CRM</div><div class="tool-tags"><span class="tool-tag">Greenhouse</span><span class="tool-tag">Lever</span><span class="tool-tag">Ashby</span><span class="tool-tag">SuccessFactors</span><span class="tool-tag">Avature</span><span class="tool-tag">Workable</span><span class="tool-tag">JazzHR</span></div></div>
+    <div class="tool-group"><div class="tool-group-label">Sourcing</div><div class="tool-tags"><span class="tool-tag">LinkedIn Recruiter</span><span class="tool-tag">SeekOut</span><span class="tool-tag">HireEZ</span><span class="tool-tag">Gem</span><span class="tool-tag">Juicebox</span><span class="tool-tag">GitHub API</span><span class="tool-tag">ArXiv</span><span class="tool-tag">Boolean/X-Ray</span></div></div>
+    <div class="tool-group"><div class="tool-group-label">AI Recruiting</div><div class="tool-tags"><span class="tool-tag">Claude API</span><span class="tool-tag">JD Optimization</span><span class="tool-tag">Bias Detection</span><span class="tool-tag">Pipeline Enrichment</span><span class="tool-tag">Outreach Personalization</span></div></div>
+    <div class="tool-group"><div class="tool-group-label">Analytics</div><div class="tool-tags"><span class="tool-tag">Tableau</span><span class="tool-tag">Excel / Pivot Tables</span><span class="tool-tag">Google Sheets</span><span class="tool-tag">ATS Dashboards</span></div></div>
+    <div class="tool-group"><div class="tool-group-label">Comp & Equity</div><div class="tool-tags"><span class="tool-tag">Carta</span><span class="tool-tag">Pave</span><span class="tool-tag">Radford</span><span class="tool-tag">Levels.fyi</span><span class="tool-tag">Blind / Teamblind</span></div></div>
+    <div class="tool-group"><div class="tool-group-label">Immigration & EOR</div><div class="tool-tags"><span class="tool-tag">H-1B</span><span class="tool-tag">TN Visa</span><span class="tool-tag">O-1 / L-1</span><span class="tool-tag">VelocityGlobal</span><span class="tool-tag">Deel / Remote</span><span class="tool-tag">UK Right to Work</span></div></div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section class="github-section" id="github">
+  <div class="section-label">Open work</div>
+  <h2 class="section-heading reveal">See how I think.<br><em>Not just what I claim.</em></h2>
+  <div class="github-cards reveal">
+    <div class="github-card">
+      <div class="github-card-icon">~/sourcing</div>
+      <div class="github-card-title">Sourcing Frameworks</div>
+      <div class="github-card-desc">ArXiv mining, GitHub API contributor scripts, X-Ray Boolean libraries, patent database workflows, and university lab pipelines — documented in full.</div>
     </div>
-    <div class="tool-group">
-      <div class="tool-group-label">Sourcing</div>
-      <div class="tool-tags">
-        <span class="tool-tag">LinkedIn Recruiter</span>
-        <span class="tool-tag">SeekOut</span>
-        <span class="tool-tag">HireEZ</span>
-        <span class="tool-tag">Gem</span>
-        <span class="tool-tag">Juicebox</span>
-        <span class="tool-tag">GitHub API</span>
-        <span class="tool-tag">ArXiv</span>
-        <span class="tool-tag">Kaggle</span>
-        <span class="tool-tag">Boolean/X-Ray</span>
-      </div>
+    <div class="github-card">
+      <div class="github-card-icon">~/playbooks</div>
+      <div class="github-card-title">Recruiting Playbooks</div>
+      <div class="github-card-desc">The 0→1 founding recruiter playbook, market mapping guide, comp benchmarking framework, employer branding system, and onboarding infrastructure — all open.</div>
     </div>
-    <div class="tool-group">
-      <div class="tool-group-label">AI Recruiting</div>
-      <div class="tool-tags">
-        <span class="tool-tag">Claude API</span>
-        <span class="tool-tag">JD Optimization</span>
-        <span class="tool-tag">Bias Detection</span>
-        <span class="tool-tag">Pipeline Enrichment</span>
-        <span class="tool-tag">Outreach Personalization</span>
-        <span class="tool-tag">Auto-screening</span>
-      </div>
+    <div class="github-card">
+      <div class="github-card-icon">~/market-intelligence</div>
+      <div class="github-card-title">Market Intelligence</div>
+      <div class="github-card-desc">Competitive landscape frameworks, comp band building with equity modeling, talent movement pattern analysis, and win/loss templates for hiring leadership.</div>
     </div>
-    <div class="tool-group">
-      <div class="tool-group-label">Analytics</div>
-      <div class="tool-tags">
-        <span class="tool-tag">Tableau</span>
-        <span class="tool-tag">Excel / Pivot Tables</span>
-        <span class="tool-tag">Google Sheets</span>
-        <span class="tool-tag">ATS Dashboards</span>
-      </div>
-    </div>
-    <div class="tool-group">
-      <div class="tool-group-label">Comp & Equity</div>
-      <div class="tool-tags">
-        <span class="tool-tag">Carta</span>
-        <span class="tool-tag">Pave</span>
-        <span class="tool-tag">Radford</span>
-        <span class="tool-tag">Levels.fyi</span>
-        <span class="tool-tag">Blind / Teamblind</span>
-      </div>
-    </div>
-    <div class="tool-group">
-      <div class="tool-group-label">Immigration & EOR</div>
-      <div class="tool-tags">
-        <span class="tool-tag">H-1B</span>
-        <span class="tool-tag">TN Visa</span>
-        <span class="tool-tag">O-1 / L-1</span>
-        <span class="tool-tag">VelocityGlobal</span>
-        <span class="tool-tag">Deel / Remote</span>
-        <span class="tool-tag">UK Right to Work</span>
-      </div>
-    </div>
+  </div>
+  <div class="github-links reveal">
+    <a href="https://github.com/marvelchandra/recruiting-portfolio" class="github-link github-link-primary" target="_blank">View the full repository →</a>
+    <a href="https://github.com/marvelchandra" class="github-link github-link-secondary" target="_blank">GitHub profile & contributions →</a>
   </div>
 </section>
 
 <!-- ASK ME -->
 <section class="ask-section" id="ask">
   <div class="ask-container">
-    <div class="section-label" style="justify-content:center">AI-Powered</div>
-    <h2 class="section-heading reveal" style="text-align:center">Ask me anything<br>about recruiting.</h2>
-    <p class="ask-intro reveal">Powered by the Claude API and my own playbooks. Ask about sourcing, comp, onboarding, market mapping — anything a founding recruiter would know.</p>
-
+    <div class="section-label" style="justify-content:center">Ask me anything</div>
+    <h2 class="section-heading reveal" style="text-align:center;color:var(--ink)">Ask me anything<br><em>about recruiting.</em></h2>
+    <p class="ask-intro reveal">Ask me anything. I have opinions on all of it — sourcing, comp, onboarding, market mapping, building from scratch. I will answer the way I would in a first conversation.</p>
     <div class="ask-chips reveal">
       <span class="ask-chip" onclick="setQ(this)">How do you source a Staff ML Engineer?</span>
       <span class="ask-chip" onclick="setQ(this)">What does 0→1 recruiting infrastructure look like?</span>
       <span class="ask-chip" onclick="setQ(this)">How do you build a comp band for a Series A startup?</span>
-      <span class="ask-chip" onclick="setQ(this)">How do you source ASIC engineers for a semiconductor startup?</span>
-      <span class="ask-chip" onclick="setQ(this)">What's your employer branding approach at an unknown startup?</span>
+      <span class="ask-chip" onclick="setQ(this)">How do you source ASIC engineers?</span>
+      <span class="ask-chip" onclick="setQ(this)">What is your employer branding approach?</span>
     </div>
-
     <div class="ask-box reveal">
       <input class="ask-input" id="askInput" type="text" placeholder="Type your recruiting question...">
       <button class="ask-btn" id="askBtn" onclick="askQuestion()">Ask →</button>
     </div>
+    <div class="ask-status" id="askStatus"></div>
     <div class="ask-response" id="askResponse"></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2 class="cta-heading reveal">
-    Let's build<br>something <em>exceptional</em>.
-  </h2>
+  <h2 class="cta-heading reveal">Let's build something<br><em>exceptional.</em></h2>
   <p class="cta-sub reveal">Open to founding recruiter, Head of TA, senior technical, and GTM roles<br>at high-bar technical startups. Series A–C, deep tech, building from scratch.</p>
   <div class="cta-links reveal">
-    <a href="https://linkedin.com/in/chandrabuduri" class="cta-btn cta-btn-primary" target="_blank">LinkedIn Profile →</a>
+    <a href="https://linkedin.com/in/chandrabuduri" class="cta-btn cta-btn-primary" target="_blank">LinkedIn →</a>
     <a href="mailto:budri.chandra@gmail.com" class="cta-btn cta-btn-secondary">budri.chandra@gmail.com</a>
-    <a href="https://github.com/marvelchandra/recruiting-portfolio" class="cta-btn cta-btn-secondary" target="_blank">View Full Repo →</a>
+    <a href="https://github.com/marvelchandra/recruiting-portfolio" class="cta-btn cta-btn-secondary" target="_blank">Repo →</a>
+    <a href="https://github.com/marvelchandra" class="cta-btn cta-btn-secondary" target="_blank">GitHub Profile →</a>
   </div>
 </section>
 
 <footer>
-  <div class="footer-left">© 2026 Chandra Buduri · San Francisco Bay Area</div>
-  <div class="footer-right">recruiting-portfolio · Built with intention</div>
+  <div class="footer-text">© 2026 Chandra Buduri · San Francisco Bay Area</div>
+  <div class="footer-text">recruiting-portfolio · Built with intention</div>
 </footer>
 
 <script>
-// CURSOR
+const WORKER_URL = 'YOUR_WORKER_URL_HERE';
+
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
-
 document.addEventListener('mousemove',e=>{
   mx=e.clientX;my=e.clientY;
   cursor.style.left=mx+'px';cursor.style.top=my+'px';
 });
-
-function animateRing(){
-  rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;
+(function animRing(){
+  rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;
   ring.style.left=rx+'px';ring.style.top=ry+'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-
-document.querySelectorAll('a,button,.role-pill,.ask-chip,.tool-tag').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{
-    cursor.style.width='20px';cursor.style.height='20px';
-    cursor.style.background='var(--teal2)';
-  });
-  el.addEventListener('mouseleave',()=>{
-    cursor.style.width='12px';cursor.style.height='12px';
-    cursor.style.background='var(--gold)';
-  });
+  requestAnimationFrame(animRing);
+})();
+document.querySelectorAll('a,button,.role-pill,.ask-chip,.tool-tag,.github-link').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';cursor.style.background='var(--teal2)';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='9px';cursor.style.height='9px';cursor.style.background='var(--gold2)';});
 });
 
-// COUNTER ANIMATION
 function animateCounter(el){
-  const target=parseInt(el.dataset.target||el.textContent);
-  const suffix=el.dataset.suffix||'+';
-  let current=0;
-  const duration=2000;
-  const step=target/duration*16;
+  const target=parseInt(el.dataset.target);
+  const suffix=el.dataset.suffix||'';
+  let current=0;const step=target/112;
   const timer=setInterval(()=>{
     current+=step;
     if(current>=target){current=target;clearInterval(timer);}
@@ -1176,40 +942,30 @@ function animateCounter(el){
   },16);
 }
 
-// SCROLL REVEAL + COUNTER TRIGGER
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      if(entry.target.classList.contains('stat-num')){
-        animateCounter(entry.target);
-      }
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      if(e.target.dataset.target) animateCounter(e.target);
     }
   });
-},{threshold:0.15});
+},{threshold:0.12});
+document.querySelectorAll('.reveal,.timeline-item,.stat-num').forEach(el=>obs.observe(el));
 
-document.querySelectorAll('.reveal,.timeline-item').forEach(el=>observer.observe(el));
-document.querySelectorAll('.stat-num').forEach(el=>observer.observe(el));
-
-// SOURCING BAR ANIMATION
-const sourcingObs=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
+const sObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
       document.querySelectorAll('.channel-item').forEach((item,i)=>{
-        setTimeout(()=>{
-          const pct=item.dataset.pct;
-          item.querySelector('.channel-bar-fill').style.height=pct+'%';
-        },i*120);
+        setTimeout(()=>{item.querySelector('.channel-bar-fill').style.height=item.dataset.pct+'%';},i*100);
       });
-      sourcingObs.disconnect();
+      sObs.disconnect();
     }
   });
-},{threshold:0.3});
-
+},{threshold:0.2});
 const sc=document.getElementById('sourcingChannels');
-if(sc) sourcingObs.observe(sc);
+if(sc) sObs.observe(sc);
 
-// ROLE PILLS
+document.querySelectorAll('.timeline-item').forEach((item,i)=>{item.style.transitionDelay=(i*0.07)+'s';});
 document.querySelectorAll('.role-pill').forEach(pill=>{
   pill.addEventListener('click',()=>{
     document.querySelectorAll('.role-pill').forEach(p=>p.classList.remove('active'));
@@ -1217,76 +973,52 @@ document.querySelectorAll('.role-pill').forEach(pill=>{
   });
 });
 
-// ASK ME — CLAUDE API
-function setQ(el){
-  document.getElementById('askInput').value=el.textContent;
-  document.getElementById('askInput').focus();
-}
+function setQ(el){document.getElementById('askInput').value=el.textContent;document.getElementById('askInput').focus();}
 
 async function askQuestion(){
   const input=document.getElementById('askInput');
   const btn=document.getElementById('askBtn');
   const response=document.getElementById('askResponse');
+  const status=document.getElementById('askStatus');
   const q=input.value.trim();
   if(!q)return;
 
-  btn.disabled=true;btn.textContent='Thinking...';
-  response.classList.add('visible');
-  response.innerHTML='<span class="ask-typing"></span>';
-
-  const systemPrompt=`You are Chandra Buduri's recruiting portfolio assistant. Chandra is a senior technical recruiter and founding recruiter with 10+ years of experience specializing in AI/ML, semiconductor, hardware, cloud infrastructure, and GTM roles at startups from seed to pre-IPO.
-
-Key facts about Chandra:
-- 600+ total hires closed, 15+ companies scaled, 5+ founding recruiter roles, 40% average time-to-hire reduction
-- Deep sourcing expertise: ArXiv, Papers With Code, GitHub API, IEEE Xplore, Google Patents, OpenReview, university lab pages, X-Ray Boolean search
-- Companies: Cisco (600+ hires, #1 globally 2017), Arrcus (Series B-D, scaled 50→130), Factory VC (10+ portfolio companies), Astera Labs (semiconductor/pre-IPO), CommScope/Vistance (100+ hires in 12 months)
-- Builds 0→1 recruiting infrastructure: ATS (Ashby/Greenhouse/Lever), interview loops, scorecards, comp frameworks (Carta/Pave/Radford), employer brand
-- Immigration expertise: H-1B, TN, O-1, L-1, EOR structures globally
-- Built an AI-powered JD bias detection tool using the Claude API
-
-Answer questions about recruiting strategy, sourcing, comp, onboarding, market mapping, employer branding, or anything a world-class founding recruiter would know. Be specific, practical, and draw on Chandra's actual experience. Keep answers to 3-5 paragraphs max. Write in first person as if you are Chandra.`;
-
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:systemPrompt,
-        messages:[{role:'user',content:q}]
-      })
-    });
-    const data=await res.json();
-    const text=data.content?.[0]?.text||'Something went wrong. Please try again.';
-
-    // Typewriter effect
-    response.innerHTML='';
-    let i=0;
-    const typewriter=setInterval(()=>{
-      if(i<text.length){
-        response.textContent+=text[i];i++;
-        response.scrollTop=response.scrollHeight;
-      }else{
-        clearInterval(typewriter);
-      }
-    },12);
-
-  }catch(err){
-    response.textContent='Unable to connect to the API. Make sure an API key is configured.\n\nError: '+err.message;
+  if(WORKER_URL==='YOUR_WORKER_URL_HERE'){
+    response.classList.add('visible');
+    response.textContent='Reach out directly at budri.chandra@gmail.com — happy to answer any recruiting question personally.';
+    return;
   }
 
-  btn.disabled=false;btn.textContent='Ask →';
+  btn.disabled=true;btn.textContent='Thinking...';
+  status.textContent='...';
+  response.classList.remove('visible');response.textContent='';
+
+  try{
+    const res=await fetch(WORKER_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({message:q})
+    });
+    const data=await res.json();
+    if(data.error){
+      response.classList.add('visible');
+      response.textContent='Something went wrong. Reach out directly at budri.chandra@gmail.com.';
+    } else {
+      const text=data.response;
+      response.classList.add('visible');response.textContent='';
+      let i=0;status.textContent='';
+      const tw=setInterval(()=>{
+        if(i<text.length){response.textContent+=text[i];i++;}
+        else clearInterval(tw);
+      },10);
+    }
+  } catch(err){
+    response.classList.add('visible');
+    response.textContent='Something went wrong. Reach out directly at budri.chandra@gmail.com.';
+  }
+  btn.disabled=false;btn.textContent='Ask →';status.textContent='';
 }
-
-document.getElementById('askInput').addEventListener('keydown',e=>{
-  if(e.key==='Enter')askQuestion();
-});
-
-// TIMELINE STAGGER
-document.querySelectorAll('.timeline-item').forEach((item,i)=>{
-  item.style.transitionDelay=(i*0.1)+'s';
-});
+document.getElementById('askInput').addEventListener('keydown',e=>{if(e.key==='Enter')askQuestion();});
 </script>
 </body>
 </html>

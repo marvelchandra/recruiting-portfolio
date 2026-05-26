@@ -90,15 +90,15 @@ body{
 .nav-logo{
   font-family:'DM Mono',monospace;
   font-size:11px;letter-spacing:0.18em;
-  color:rgba(245,242,236,0.3);
+  color:rgba(245,242,236,0.55);
 }
 .nav-links{display:flex;gap:36px;list-style:none;}
 .nav-links a{
   font-size:12px;letter-spacing:0.06em;
-  color:rgba(245,242,236,0.3);text-decoration:none;
+  color:rgba(245,242,236,0.55);text-decoration:none;
   transition:color 0.2s;font-weight:400;
 }
-.nav-links a:hover{color:rgba(245,242,236,0.75)}
+.nav-links a:hover{color:rgba(245,242,236,0.95)}
 
 .hero-content{
   position:relative;z-index:10;
@@ -108,21 +108,22 @@ body{
 
 .hero-eyebrow{
   font-family:'DM Mono',monospace;
-  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  font-size:11px;letter-spacing:0.22em;text-transform:uppercase;
   color:var(--teal2);margin-bottom:30px;
   display:flex;align-items:center;gap:14px;
-  opacity:0;animation:fadeUp 0.7s 0.2s ease forwards;
+  opacity:0;animation:fadeUp 0.6s 0.1s ease forwards;
 }
-.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--teal2);opacity:0.5;}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--teal2);opacity:0.8;}
 
 .hero-name{
   font-family:'Fraunces',serif;
   font-size:clamp(54px,7.5vw,110px);
-  font-weight:300;line-height:0.92;
-  color:var(--cream);
+  font-weight:400;line-height:0.92;
+  color:#FAFAF8;
   letter-spacing:-0.025em;
   margin-bottom:4px;
-  opacity:0;animation:fadeUp 0.7s 0.32s ease forwards;
+  opacity:0;animation:fadeUp 0.6s 0.2s ease forwards;
+  -webkit-font-smoothing:antialiased;
 }
 .hero-name-accent{
   font-style:italic;color:var(--gold3);display:block;
@@ -130,53 +131,53 @@ body{
 
 .hero-title{
   font-family:'Fraunces',serif;font-weight:300;font-style:italic;
-  font-size:clamp(15px,1.8vw,21px);
-  color:rgba(245,242,236,0.3);
+  font-size:clamp(16px,1.8vw,22px);
+  color:rgba(245,242,236,0.65);
   margin-bottom:48px;letter-spacing:0.01em;
-  opacity:0;animation:fadeUp 0.7s 0.44s ease forwards;
+  opacity:0;animation:fadeUp 0.6s 0.3s ease forwards;
 }
 
 .hero-roles{
   display:flex;flex-wrap:wrap;gap:7px;margin-bottom:0;
-  opacity:0;animation:fadeUp 0.7s 0.56s ease forwards;
+  opacity:0;animation:fadeUp 0.6s 0.4s ease forwards;
 }
 .role-pill{
   font-size:11px;letter-spacing:0.06em;
   padding:6px 16px;
-  border:1px solid rgba(245,242,236,0.08);
-  color:rgba(245,242,236,0.38);
+  border:1px solid rgba(245,242,236,0.18);
+  color:rgba(245,242,236,0.65);
   border-radius:2px;cursor:pointer;
   transition:all 0.2s;font-weight:400;
 }
 .role-pill:hover,.role-pill.active{
-  background:rgba(196,160,85,0.1);
-  color:var(--gold3);border-color:rgba(196,160,85,0.25);
+  background:rgba(196,160,85,0.12);
+  color:var(--gold3);border-color:rgba(196,160,85,0.4);
 }
 
 /* STATS */
 .stats-bar{
   position:relative;z-index:10;
   display:grid;grid-template-columns:repeat(5,1fr);
-  border-top:1px solid rgba(255,255,255,0.04);
-  opacity:0;animation:fadeUp 0.7s 0.7s ease forwards;
+  border-top:1px solid rgba(255,255,255,0.06);
+  opacity:0;animation:fadeUp 0.6s 0.5s ease forwards;
 }
 .stat-item{
   padding:22px 36px;
-  border-right:1px solid rgba(255,255,255,0.04);
+  border-right:1px solid rgba(255,255,255,0.06);
 }
 .stat-item:last-child{border-right:none}
 .stat-num{
   font-family:'Fraunces',serif;
-  font-size:30px;font-weight:300;
+  font-size:30px;font-weight:400;
   color:var(--gold3);line-height:1;margin-bottom:5px;
 }
 .stat-label{
-  font-size:9px;letter-spacing:0.14em;text-transform:uppercase;
-  color:rgba(245,242,236,0.22);font-weight:400;
+  font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(245,242,236,0.45);font-weight:400;
 }
 
 @keyframes fadeUp{
-  from{opacity:0;transform:translateY(18px)}
+  from{opacity:0;transform:translateY(14px)}
   to{opacity:1;transform:translateY(0)}
 }
 
@@ -674,102 +675,195 @@ footer{
         </div>
       </div>
     </div>
-    <div class="network-viz reveal">
-      <svg viewBox="0 0 500 520" xmlns="http://www.w3.org/2000/svg" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
-        <defs>
-          <radialGradient id="cg" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#C4A055" stop-opacity="0.18"/>
-            <stop offset="100%" stop-color="#C4A055" stop-opacity="0"/>
-          </radialGradient>
-          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="1.5" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <!-- Node background fill for text legibility -->
-          <filter id="solid">
-            <feFlood flood-color="rgba(10,12,18,0.85)" result="bg"/>
-            <feMerge><feMergeNode in="bg"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
+    <div class="network-viz reveal" style="height:560px;position:sticky;top:80px;">
+      <canvas id="brainCv" style="width:100%;height:100%;border-radius:8px;background:#050d1a;display:block;"></canvas>
+      <script>
+      (function(){
+        const cv=document.getElementById('brainCv');
+        const ctx=cv.getContext('2d');
+        function h2r(hex,a){var h=hex.replace('#','');if(h.length===3){h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];}var r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);return 'rgba('+r+','+g+','+b+','+a+')';}
+        cv.width=560;cv.height=560;
+        const W=560,H=560,cx=W/2,cy=H/2-15;
+        let fr=0;
 
-        <!-- Connection lines -->
-        <g stroke="rgba(196,160,85,0.1)" stroke-width="1" fill="none">
-          <line x1="250" y1="260" x2="130" y2="100"/>
-          <line x1="250" y1="260" x2="370" y2="100"/>
-          <line x1="250" y1="260" x2="80" y2="260"/>
-          <line x1="250" y1="260" x2="420" y2="260"/>
-          <line x1="250" y1="260" x2="130" y2="420"/>
-          <line x1="250" y1="260" x2="370" y2="420"/>
-          <line x1="250" y1="260" x2="250" y2="55"/>
-          <line x1="130" y1="100" x2="250" y2="55"/>
-          <line x1="370" y1="100" x2="250" y2="55"/>
-        </g>
+        function brainShape(){
+          ctx.beginPath();
+          ctx.moveTo(cx,cy-90);
+          ctx.bezierCurveTo(cx-30,cy-105,cx-72,cy-98,cx-108,cy-75);
+          ctx.bezierCurveTo(cx-140,cy-50,cx-145,cy-18,cx-138,cy+12);
+          ctx.bezierCurveTo(cx-130,cy+42,cx-112,cy+68,cx-84,cy+86);
+          ctx.bezierCurveTo(cx-58,cy+104,cx-26,cy+112,cx-7,cy+113);
+          ctx.bezierCurveTo(cx-5,cy+115,cx-3,cy+132,cx,cy+145);
+          ctx.bezierCurveTo(cx+3,cy+132,cx+5,cy+115,cx+7,cy+113);
+          ctx.bezierCurveTo(cx+26,cy+112,cx+58,cy+104,cx+84,cy+86);
+          ctx.bezierCurveTo(cx+112,cy+68,cx+130,cy+42,cx+138,cy+12);
+          ctx.bezierCurveTo(cx+145,cy-18,cx+140,cy-50,cx+108,cy-75);
+          ctx.bezierCurveTo(cx+72,cy-98,cx+30,cy-105,cx,cy-90);
+          ctx.closePath();
+        }
 
-        <!-- Outer nodes — larger circles, solid dark fill, full-opacity text -->
-        <g filter="url(#glow)">
+        const gyri=[
+          [[-74,-72],[-53,-83],[-28,-86],[0,-83]],
+          [[-101,-69],[-77,-83],[-52,-89],[-24,-93],[0,-91]],
+          [[-114,-52],[-90,-67],[-64,-76],[-38,-81],[-12,-83]],
+          [[-122,-33],[-101,-50],[-76,-60],[-48,-65],[-21,-68]],
+          [[-127,-12],[-108,-29],[-83,-41],[-55,-47],[-26,-50]],
+          [[-129,10],[-112,-7],[-86,-19],[-58,-26],[-29,-28]],
+          [[-127,33],[-110,15],[-84,3],[-56,-3],[-28,-6]],
+          [[-120,55],[-105,38],[-79,26],[-52,19],[-24,16]],
+          [[-110,76],[-95,58],[-71,46],[-45,40],[-19,37]],
+          [[-95,93],[-79,77],[-57,65],[-34,58],[-10,57]],
+          [[-73,105],[-58,93],[-39,84],[-15,82]],
+          [[-52,-96],[-34,-103],[-13,-105]],
+          [[-73,-86],[-53,-96],[-33,-100]],
+          [[-93,-71],[-72,-83],[-50,-89]],
+          [[-58,-9],[-69,21],[-73,50],[-64,77]],
+          [[-34,-95],[-40,-69],[-41,-38],[-34,-7]],
+          [[86,-84],[62,-96],[33,-100],[0,-96]],
+          [[101,-69],[77,-83],[52,-89],[24,-93],[0,-91]],
+          [[114,-52],[90,-67],[64,-76],[38,-81],[12,-83]],
+          [[122,-33],[101,-50],[76,-60],[48,-65],[21,-68]],
+          [[127,-12],[108,-29],[83,-41],[55,-47],[26,-50]],
+          [[129,10],[112,-7],[86,-19],[58,-26],[29,-28]],
+          [[127,33],[110,15],[84,3],[56,-3],[28,-6]],
+          [[120,55],[105,38],[79,26],[52,19],[24,16]],
+          [[110,76],[95,58],[71,46],[45,40],[19,37]],
+          [[95,93],[79,77],[57,65],[34,58],[10,57]],
+          [[73,105],[58,93],[39,84],[15,82]],
+          [[52,-96],[34,-103],[13,-105]],
+          [[73,-86],[53,-96],[33,-100]],
+          [[93,-71],[72,-83],[50,-89]],
+          [[58,-9],[69,21],[73,50],[64,77]],
+          [[34,-95],[40,-69],[41,-38],[34,-7]],
+        ];
 
-          <!-- ArXiv — top center -->
-          <circle cx="250" cy="55" r="36" fill="rgba(8,20,16,0.95)" stroke="rgba(18,138,108,0.6)" stroke-width="1.5"/>
-          <text x="250" y="49" text-anchor="middle" fill="#2ECFA0" font-family="Inter,sans-serif" font-size="11" font-weight="600">ArXiv</text>
-          <text x="250" y="64" text-anchor="middle" fill="rgba(46,207,160,0.6)" font-family="monospace" font-size="9">Papers · Scholar</text>
+        const outer=[
+          {ox:-205,oy:-118,ix:-110,iy:-65,label:'ArXiv',col:'#4FC3F7',ta:'right'},
+          {ox:205,oy:-118,ix:110,iy:-65,label:'GitHub',col:'#FFB74D',ta:'left'},
+          {ox:-218,oy:10,ix:-136,iy:10,label:'IEEE Xplore',col:'#26C6DA',ta:'right'},
+          {ox:218,oy:10,ix:136,iy:10,label:'X-Ray Boolean',col:'#FF8A65',ta:'left'},
+          {ox:-185,oy:135,ix:-86,iy:85,label:'Kaggle',col:'#80DEEA',ta:'right'},
+          {ox:185,oy:135,ix:86,iy:85,label:'Conferences',col:'#FFB74D',ta:'left'},
+          {ox:0,oy:-195,ix:0,iy:-90,label:'University Labs',col:'#CE93D8',ta:'center'},
+          {ox:-100,oy:200,ix:-12,iy:130,label:'Resume Mining',col:'#A5D6A7',ta:'right'},
+          {ox:100,oy:200,ix:12,iy:130,label:'Patents·USPTO',col:'#FFCC80',ta:'left'},
+        ].map(n=>({...n,ox:cx+n.ox,oy:cy+n.oy,ix:cx+n.ix,iy:cy+n.iy}));
 
-          <!-- GitHub — top left -->
-          <circle cx="130" cy="100" r="32" fill="rgba(12,10,6,0.95)" stroke="rgba(196,160,85,0.55)" stroke-width="1.5"/>
-          <text x="130" y="95" text-anchor="middle" fill="#DDB96A" font-family="Inter,sans-serif" font-size="11" font-weight="600">GitHub</text>
-          <text x="130" y="110" text-anchor="middle" fill="rgba(221,185,106,0.55)" font-family="monospace" font-size="9">API Mining</text>
+        const hots=[
+          {x:0,y:-8,r:7,col:'#ffffff',core:true},
+          {x:-60,y:-72,r:4,col:'#4FC3F7'},
+          {x:60,y:-72,r:4,col:'#FFB74D'},
+          {x:-105,y:-25,r:3.5,col:'#26C6DA'},
+          {x:105,y:-25,r:3.5,col:'#FF8A65'},
+          {x:-88,y:45,r:3.5,col:'#26C6DA'},
+          {x:88,y:45,r:3.5,col:'#FF8A65'},
+          {x:-38,y:-108,r:3,col:'#4FC3F7'},
+          {x:38,y:-108,r:3,col:'#FFB74D'},
+          {x:-35,y:92,r:3,col:'#80DEEA'},
+          {x:35,y:92,r:3,col:'#FFCC80'},
+        ];
 
-          <!-- IEEE — top right -->
-          <circle cx="370" cy="100" r="32" fill="rgba(18,8,6,0.95)" stroke="rgba(200,100,70,0.55)" stroke-width="1.5"/>
-          <text x="370" y="95" text-anchor="middle" fill="#E87A55" font-family="Inter,sans-serif" font-size="11" font-weight="600">IEEE</text>
-          <text x="370" y="110" text-anchor="middle" fill="rgba(232,122,85,0.55)" font-family="monospace" font-size="9">Patents</text>
+        const pulses=[];
+        function addP(){
+          const n=outer[Math.floor(Math.random()*outer.length)];
+          const inw=Math.random()>0.25;
+          pulses.push({x:inw?n.ox:n.ix,y:inw?n.oy:n.iy,tx:inw?n.ix:n.ox,ty:inw?n.iy:n.oy,p:0,spd:0.014+Math.random()*0.01,col:n.col,sz:2+Math.random()*2});
+        }
 
-          <!-- X-Ray — mid left -->
-          <circle cx="80" cy="260" r="34" fill="rgba(6,10,18,0.95)" stroke="rgba(100,150,200,0.5)" stroke-width="1.5"/>
-          <text x="80" y="254" text-anchor="middle" fill="#8AB4D8" font-family="Inter,sans-serif" font-size="11" font-weight="600">X-Ray</text>
-          <text x="80" y="270" text-anchor="middle" fill="rgba(138,180,216,0.55)" font-family="monospace" font-size="9">Boolean</text>
+        function draw(){
+          ctx.clearRect(0,0,W,H);
+          ctx.fillStyle='#050d1a';ctx.fillRect(0,0,W,H);
+          const bp=0.5+0.5*Math.sin(fr*0.025);
 
-          <!-- OpenReview — mid right -->
-          <circle cx="420" cy="260" r="34" fill="rgba(6,14,12,0.95)" stroke="rgba(18,138,108,0.45)" stroke-width="1.5"/>
-          <text x="420" y="252" text-anchor="middle" fill="#2ECFA0" font-family="Inter,sans-serif" font-size="10" font-weight="600">OpenReview</text>
-          <text x="420" y="267" text-anchor="middle" fill="rgba(46,207,160,0.5)" font-family="monospace" font-size="9">Conferences</text>
+          for(let i=5;i>0;i--){brainShape();ctx.strokeStyle=`rgba(20,70,200,${0.022*i})`;ctx.lineWidth=i*9;ctx.stroke();}
 
-          <!-- Kaggle — bot left -->
-          <circle cx="130" cy="420" r="30" fill="rgba(12,10,6,0.95)" stroke="rgba(196,160,85,0.4)" stroke-width="1.5" stroke-dasharray="4,2"/>
-          <text x="130" y="415" text-anchor="middle" fill="rgba(221,185,106,0.85)" font-family="Inter,sans-serif" font-size="11" font-weight="600">Kaggle</text>
-          <text x="130" y="430" text-anchor="middle" fill="rgba(221,185,106,0.45)" font-family="monospace" font-size="9">HuggingFace</text>
+          brainShape();
+          const g=ctx.createRadialGradient(cx,cy-15,5,cx,cy,168);
+          g.addColorStop(0,`rgba(30,100,215,${0.7+bp*0.08})`);
+          g.addColorStop(0.45,'rgba(18,62,165,0.52)');
+          g.addColorStop(0.8,'rgba(10,32,110,0.32)');
+          g.addColorStop(1,'rgba(5,12,55,0.1)');
+          ctx.fillStyle=g;ctx.fill();
 
-          <!-- ORCID — bot right -->
-          <circle cx="370" cy="420" r="30" fill="rgba(6,10,18,0.95)" stroke="rgba(100,150,200,0.35)" stroke-width="1.5" stroke-dasharray="4,2"/>
-          <text x="370" y="415" text-anchor="middle" fill="rgba(138,180,216,0.85)" font-family="Inter,sans-serif" font-size="11" font-weight="600">ORCID</text>
-          <text x="370" y="430" text-anchor="middle" fill="rgba(138,180,216,0.45)" font-family="monospace" font-size="9">Uni Labs</text>
+          ctx.save();brainShape();ctx.clip();
+          const ig=ctx.createRadialGradient(cx,cy,0,cx,cy,72);
+          ig.addColorStop(0,`rgba(160,215,255,${0.22+bp*0.1})`);ig.addColorStop(1,'rgba(0,0,0,0)');
+          ctx.fillStyle=ig;ctx.fillRect(cx-62,cy-62,124,124);
 
-        </g>
+          ctx.lineCap='round';
+          gyri.forEach(pts=>{
+            ctx.beginPath();ctx.moveTo(cx+pts[0][0],cy+pts[0][1]);
+            for(let i=1;i<pts.length-1;i++){
+              const mx=(pts[i][0]+pts[i+1][0])/2,my=(pts[i][1]+pts[i+1][1])/2;
+              ctx.quadraticCurveTo(cx+pts[i][0],cy+pts[i][1],cx+mx,cy+my);
+            }
+            const l=pts[pts.length-1];ctx.lineTo(cx+l[0],cy+l[1]);
+            ctx.strokeStyle=`rgba(80,175,255,${0.2+bp*0.06})`;ctx.lineWidth=1.1;ctx.stroke();
+          });
 
-        <!-- CENTER NODE -->
-        <circle cx="250" cy="260" r="56" fill="url(#cg)"/>
-        <circle cx="250" cy="260" r="50" fill="rgba(8,10,16,0.97)" stroke="rgba(196,160,85,0.45)" stroke-width="1.5"/>
-        <circle cx="250" cy="260" r="42" fill="none" stroke="rgba(196,160,85,0.08)" stroke-width="1" stroke-dasharray="3,3">
-          <animateTransform attributeName="transform" type="rotate" from="0 250 260" to="360 250 260" dur="28s" repeatCount="indefinite"/>
-        </circle>
-        <text x="250" y="252" text-anchor="middle" fill="rgba(221,185,106,0.95)" font-family="Georgia,serif" font-size="14" font-style="italic">Chandra</text>
-        <text x="250" y="270" text-anchor="middle" fill="rgba(221,185,106,0.5)" font-family="monospace" font-size="10">600+ hires</text>
+          ctx.beginPath();ctx.moveTo(cx,cy-90);
+          ctx.bezierCurveTo(cx-3,cy-55,cx+3,cy-15,cx,cy+38);
+          ctx.bezierCurveTo(cx-2,cy+72,cx+2,cy+98,cx,cy+113);
+          ctx.strokeStyle=`rgba(50,130,220,${0.4+bp*0.1})`;ctx.lineWidth=2;ctx.stroke();
 
-        <!-- Pulse ring -->
-        <circle cx="250" cy="260" r="50" fill="none" stroke="rgba(196,160,85,0.12)" stroke-width="1">
-          <animate attributeName="r" values="50;72;50" dur="5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.12;0;0.12" dur="5s" repeatCount="indefinite"/>
-        </circle>
+          hots.forEach(n=>{
+            const fl=0.55+0.45*Math.sin(fr*0.07+n.x*0.04+n.y*0.03);
+            const nx=cx+n.x,ny=cy+n.y;
+            const ng=ctx.createRadialGradient(nx,ny,0,nx,ny,n.r*3);
+            ng.addColorStop(0,h2r(n.col,0.8));ng.addColorStop(0.5,h2r(n.col,0.2));ng.addColorStop(1,'rgba(0,0,0,0)');
+            ctx.fillStyle=ng;ctx.beginPath();ctx.arc(nx,ny,n.r*3,0,Math.PI*2);ctx.fill();
+            if(n.core){
+              const xg=ctx.createRadialGradient(nx,ny,0,nx,ny,28);
+              xg.addColorStop(0,`rgba(255,255,255,${0.78*fl})`);xg.addColorStop(0.5,`rgba(150,210,255,${0.28*fl})`);xg.addColorStop(1,'rgba(0,0,0,0)');
+              ctx.fillStyle=xg;ctx.fillRect(nx-28,ny-28,56,56);
+            }
+            ctx.beginPath();ctx.arc(nx,ny,n.r,0,Math.PI*2);
+            ctx.fillStyle=n.core?`rgba(255,255,255,${fl})`:h2r(n.col,fl*0.86);ctx.fill();
+          });
+          ctx.restore();
 
-        <!-- Animated dots -->
-        <circle r="3" fill="rgba(221,185,106,0.8)"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
-        <path id="p1" d="M250,260 L130,100" fill="none"/>
-        <circle r="3" fill="rgba(46,207,160,0.8)"><animateMotion dur="6.5s" repeatCount="indefinite" begin="1.5s"><mpath href="#p2"/></animateMotion></circle>
-        <path id="p2" d="M250,260 L370,100" fill="none"/>
-        <circle r="3" fill="rgba(138,180,216,0.8)"><animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s"><mpath href="#p3"/></animateMotion></circle>
-        <path id="p3" d="M250,260 L420,260" fill="none"/>
-        <circle r="3" fill="rgba(232,122,85,0.8)"><animateMotion dur="4.5s" repeatCount="indefinite" begin="2.2s"><mpath href="#p4"/></animateMotion></circle>
-        <path id="p4" d="M250,260 L80,260" fill="none"/>
-      </svg>
+          brainShape();ctx.strokeStyle=`rgba(80,180,255,${0.45+bp*0.15})`;ctx.lineWidth=1.5;ctx.stroke();
+
+          outer.forEach(n=>{
+            ctx.beginPath();ctx.setLineDash([3,5]);ctx.moveTo(n.ix,n.iy);ctx.lineTo(n.ox,n.oy);
+            ctx.strokeStyle=n.col+'25';ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);
+          });
+
+          pulses.forEach(p=>{
+            const x=p.x+(p.tx-p.x)*p.p,y=p.y+(p.ty-p.y)*p.p;
+            const pg=ctx.createRadialGradient(x,y,0,x,y,p.sz*3.5);
+            pg.addColorStop(0,p.col+'ff');pg.addColorStop(0.4,p.col+'44');pg.addColorStop(1,'rgba(0,0,0,0)');
+            ctx.fillStyle=pg;ctx.beginPath();ctx.arc(x,y,p.sz*3.5,0,Math.PI*2);ctx.fill();
+            ctx.beginPath();ctx.arc(x,y,p.sz,0,Math.PI*2);ctx.fillStyle=p.col;ctx.fill();
+          });
+
+          outer.forEach(n=>{
+            const fl=0.6+0.4*Math.sin(fr*0.04+n.ox*0.01);
+            const og=ctx.createRadialGradient(n.ox,n.oy,0,n.ox,n.oy,15);
+            og.addColorStop(0,h2r(n.col,0.67));og.addColorStop(0.5,h2r(n.col,0.13));og.addColorStop(1,'rgba(0,0,0,0)');
+            ctx.fillStyle=og;ctx.beginPath();ctx.arc(n.ox,n.oy,15,0,Math.PI*2);ctx.fill();
+            ctx.beginPath();ctx.arc(n.ox,n.oy,4,0,Math.PI*2);
+            ctx.fillStyle=h2r(n.col,fl);ctx.fill();
+            ctx.fillStyle=n.col;ctx.font='500 10px Inter,sans-serif';
+            ctx.textAlign=n.ta;ctx.textBaseline='middle';
+            const lx=n.ta==='right'?n.ox-9:n.ta==='left'?n.ox+9:n.ox;
+            const ly=n.oy<cy-55?n.oy-15:n.oy>cy+55?n.oy+15:n.oy;
+            ctx.fillText(n.label,lx,ly);
+          });
+
+          ctx.fillStyle='rgba(255,255,255,0.92)';ctx.font='italic 11px Georgia,serif';
+          ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('Chandra Buduri',cx,cy-10);
+          ctx.fillStyle='rgba(150,210,255,0.6)';ctx.font='8px monospace';ctx.fillText('600+ hires',cx,cy+4);
+
+          fr++;
+          if(fr%12===0)addP();if(fr%6===0&&Math.random()>0.5)addP();
+          for(let i=pulses.length-1;i>=0;i--){pulses[i].p+=pulses[i].spd;if(pulses[i].p>=1)pulses.splice(i,1);}
+          requestAnimationFrame(draw);
+        }
+        for(let i=0;i<10;i++)addP();
+        draw();
+      })();
+      </script>
     </div>
   </div>
 </section>
@@ -780,7 +874,7 @@ footer{
   <h2 class="section-heading reveal">Built from scratch.<br><em>Every time.</em></h2>
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-date">2024–2026</div>
+      <div class="timeline-date">2024–Present</div>
       <div class="timeline-body">
         <div class="timeline-co">CommScope → Vistance Networks</div>
         <div class="timeline-role">Contractor → Full-Time Senior Recruiter · Enterprise Networking & Cloud Infrastructure</div>
@@ -788,7 +882,7 @@ footer{
           <li>Joined as a contractor in Oct 2024; converted to full-time based on performance in Dec 2025 — sole recruiter navigating a multi-entity transition across CommScope, Vistance (Ruckus, Aurora), and Amphenol</li>
           <li>100+ hires across engineering, GTM, and G&A; deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%</li>
           <li>Built SuccessFactors dashboards giving SVPs real-time visibility into funnel health and hiring velocity</li>
-          <li>Role eliminated in April 2026 as part of firm-wide restructuring following the acquisition integration.</li>
+
         </ul>
       </div>
     </div>
@@ -1023,7 +1117,7 @@ async function askQuestion(){
 
   if(WORKER_URL==='YOUR_WORKER_URL_HERE'){
     response.classList.add('visible');
-    response.textContent='This feature is coming soon. In the meantime, connect with me on LinkedIn.';
+    response.textContent='Reach out directly at budri.chandra@gmail.com — happy to answer any recruiting question personally.';
     return;
   }
 
@@ -1040,7 +1134,7 @@ async function askQuestion(){
     const data=await res.json();
     if(data.error){
       response.classList.add('visible');
-      response.textContent='Something went wrong. Connect with me on LinkedIn.';
+      response.textContent='Reach out directly at budri.chandra@gmail.com — happy to answer any recruiting question personally.';
     } else {
       const text=data.response;
       response.classList.add('visible');response.textContent='';
@@ -1052,7 +1146,7 @@ async function askQuestion(){
     }
   } catch(err){
     response.classList.add('visible');
-    response.textContent='Something went wrong. Connect with me on LinkedIn.';
+    response.textContent='Reach out directly at budri.chandra@gmail.com — happy to answer any recruiting question personally.';
   }
   btn.disabled=false;btn.textContent='Ask →';status.textContent='';
 }

@@ -212,6 +212,9 @@ section{padding:96px 64px;position:relative;}
   display:grid;grid-template-columns:repeat(2,1fr);
   gap:1px;background:var(--border);border:1px solid var(--border);
 }
+@media(min-width:1024px){
+  .role-cards{grid-template-columns:repeat(3,1fr);}
+}
 .role-card{
   background:var(--cream2);padding:44px;
   position:relative;overflow:hidden;cursor:default;
@@ -560,7 +563,7 @@ footer{
     <div class="stat-item"><div class="stat-num" data-target="600" data-suffix="+">0+</div><div class="stat-label">Total hires closed</div></div>
     <div class="stat-item"><div class="stat-num" data-target="15" data-suffix="+">0+</div><div class="stat-label">Companies scaled</div></div>
     <div class="stat-item"><div class="stat-num" data-target="40" data-suffix="%">0%</div><div class="stat-label">Avg TTH reduction</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="5" data-suffix="+">0+</div><div class="stat-label">Founding roles</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="30" data-suffix="+">0+</div><div class="stat-label">University pipelines</div></div>
     <div class="stat-item"><div class="stat-num" data-target="10" data-suffix="+">0+</div><div class="stat-label">Countries hired across</div></div>
   </div>
 </section>
@@ -609,6 +612,34 @@ footer{
         <span class="company-tag">All of the above</span><span class="company-tag">Cross-functional every time</span>
       </div>
     </div>
+
+    <div class="role-card">
+      <div class="role-card-num">05</div>
+      <div class="role-card-tag">C-suite · Community · DEI</div>
+      <h3 class="role-card-title">Executive Search & Talent Community</h3>
+      <p class="role-card-desc">Ghost recruiting for CRO, CPO, CMO, CTO, CFO, COO, and CBO roles from Xcalar onwards. University pipeline programs at 30+ top engineering schools. DEI: blind resume screening, hiring manager training, JD bias detection, and representation at GraceHopper, BlackTech, and Women in Tech conferences.</p>
+      <div class="role-card-companies">
+        <span class="company-tag">Xcalar</span>
+        <span class="company-tag">Arrcus</span>
+        <span class="company-tag">Factory VC</span>
+        <span class="company-tag">Independent</span>
+        <span class="company-tag">Cisco</span>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-num">06</div>
+      <div class="role-card-tag">Fractional · 360 desk</div>
+      <h3 class="role-card-title">Fractional TA Operator</h3>
+      <p class="role-card-desc">Full 360 desk — Recruiting, Business Development, HR, and Operations as a fractional operator for seed-stage and pre-IPO companies. Built and handed off complete talent functions: ATS, playbooks, employer brand, comp frameworks, interview infrastructure, and university pipelines — all from scratch.</p>
+      <div class="role-card-companies">
+        <span class="company-tag">Independent 2023–2024</span>
+        <span class="company-tag">Astera Labs</span>
+        <span class="company-tag">StormX</span>
+        <span class="company-tag">Confidential seed-stage</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -891,12 +922,13 @@ footer{
       <div class="timeline-date">2023–2024</div>
       <div class="timeline-body">
         <div class="timeline-co">Independent — Seed to Pre-IPO / Post-IPO</div>
-        <div class="timeline-role">Founding Recruiter · Astera Labs · StormX · AptonShops · Confidential</div>
+        <div class="timeline-role">Fractional Founding Recruiter · 360 Desk · Astera Labs · StormX · AptonShops · Confidential</div>
         <ul class="timeline-bullets">
-          <li>Chose fractional founding engagements deliberately — closed ASIC/FPGA, PCIe/CXL, AI/ML, Full-Stack, and GTM roles across US, Canada, India, EMEA</li>
-          <li>Built 0→1 recruiting infrastructure from scratch for each client — ATS, scorecards, comp frameworks, 90-day playbooks</li>
-          <li>Cut time-to-hire ~35% through high-signal sourcing, structured loops, and weekly founder syncs</li>
-          <li>Transitioned to full-time role at CommScope when the right opportunity emerged; each client engagement was stable and complete at handoff.</li>
+          <li>Operated a full 360 desk — Recruiting, Business Development, HR, and Operations — as a fractional operator across seed to pre-IPO companies</li>
+          <li>Closed ASIC/FPGA, PCIe/CXL, AI/ML, Full-Stack, and GTM roles across US, Canada, India, and EMEA; ghost recruited C-suite roles including CRO, CPO, and CMO</li>
+          <li>Built 0→1 recruiting infrastructure from scratch for each client — ATS, scorecards, comp frameworks, 90-day playbooks, employer brand</li>
+          <li>Launched university pipeline programs at top engineering schools; drove DEI initiatives including blind resume screening and diversity conference representation</li>
+          <li>Transitioned to full-time role at CommScope when the right opportunity emerged; each engagement was stable and complete at handoff.</li>
         </ul>
       </div>
     </div>
@@ -920,7 +952,8 @@ footer{
         <div class="timeline-role">Head of Talent Acquisition · Seed-Stage Portfolio</div>
         <ul class="timeline-bullets">
           <li>Embedded across 10+ portfolio companies (Modular, Atomic AI, Artera AI, Numberstation) simultaneously</li>
-          <li>Managed 15 agency recruiters — closed Head of AI/ML, Staff ML Engineers, Compiler/Runtime L7, Sr Research Engineers</li>
+          <li>Managed 15 agency recruiters — closed Head of AI/ML, Staff ML Engineers, Compiler/Runtime L7, Sr Research Engineers; ghost recruited CTO, CFO, COO, CBO, and Heads of Department across portfolio</li>
+          <li>Launched university pipeline programs at Stanford, MIT, Berkeley, CMU, Cornell, and 25+ top engineering schools; sourced MS/PhD candidates for research and infrastructure roles</li>
           <li>Built employer brand, ATS, and hiring infrastructure from zero at each company; reduced avg TTH ~40%</li>
           <li>Role eliminated when the firm restructured and closed its physical operations; returned to Arrcus shortly after at the founding team's request.</li>
         </ul>
@@ -933,6 +966,8 @@ footer{
         <div class="timeline-role">Founding Senior Recruiter · Cloud Networking</div>
         <ul class="timeline-bullets">
           <li>Joined the founding team I had supported at Cisco as their first recruiter — scaled 50 → 90 including India engineering team 0 → 15 during COVID</li>
+          <li>Launched university recruiting program — built MS/PhD pipelines at Stanford, Berkeley, MIT, CMU, Cornell, and 20+ top engineering schools</li>
+          <li>Led DEI initiatives: blind resume screening, hiring manager bias training, JD language audits, and representation at diversity conferences</li>
           <li>Weekly hiring syncs directly with CEO on headcount plans, pipeline health, and offer approvals</li>
           <li>Departed to take a Head of TA role at Factory VC; the same founding team brought me back to Arrcus two years later at Series D — the return itself reflects the relationship.</li>
         </ul>
@@ -957,6 +992,8 @@ footer{
         <ul class="timeline-bullets">
           <li>600+ hires over 4 years at 50–80 reqs/month — ranked #1 globally in 2017 out of 300+ recruiters worldwide</li>
           <li>Reduced time-to-fill 90 → 30 days — designed global sourcing training for worldwide recruiter teams</li>
+          <li>Pioneered DEI hiring practices: blind resume screening, hiring manager bias training, JD language audits, and attended GraceHopper, BlackTech, and Women in Tech conferences to source and represent Cisco</li>
+          <li>Built university recruiting relationships across top engineering programs including Stanford, MIT, Berkeley, CMU, Cornell, Caltech, Georgia Tech, and 20+ others</li>
           <li>24 Recognition Awards including a Cisco Fellow award for closing critical AI/ML and Data Science roles for stealth projects, and 3 consecutive years recognized by the SVP/GM of the Enterprise Networking Org ($16B) for true partnership</li>
         </ul>
       </div>

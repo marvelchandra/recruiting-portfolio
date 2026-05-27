@@ -283,11 +283,11 @@ section{padding:96px 64px;position:relative;}
   background:rgba(245,242,236,0.02);
   border:1px solid rgba(245,242,236,0.04);border-left:none;
 }
-.channel-name{font-size:13px;font-weight:500;color:var(--cream);margin-bottom:3px;}
-.channel-desc{font-size:11px;color:rgba(245,242,236,0.32);line-height:1.5;}
+.channel-name{font-size:13px;font-weight:600;color:#FAFAF8;margin-bottom:3px;}
+.channel-desc{font-size:11px;color:rgba(245,242,236,0.65);line-height:1.6;}
 .channel-signal{
   font-family:'DM Mono',monospace;
-  font-size:10px;color:var(--gold3);margin-top:4px;letter-spacing:0.06em;
+  font-size:10px;color:var(--gold3);margin-top:5px;letter-spacing:0.06em;font-weight:500;
 }
 
 .network-viz{position:sticky;top:80px;height:460px;}
@@ -568,6 +568,31 @@ footer{
   </div>
 </section>
 
+<!-- CAREER TRAJECTORY STATEMENT -->
+<section style="background:var(--cream2);padding:32px 64px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:780px;margin:0 auto;">
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+      On career trajectory
+      <span style="flex:1;max-width:40px;height:1px;background:var(--gold);opacity:0.3;display:block"></span>
+    </div>
+    <p style="font-family:'Fraunces',serif;font-size:clamp(15px,1.6vw,19px);font-weight:300;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:12px;">
+      "Most of my engagements have been at early and growth-stage companies — where roles are built, scaled, and sometimes restructured as strategy evolves. I didn't contribute to the instability. I was brought in to stabilize it."
+    </p>
+    <p style="font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:14px;">
+      OpenAI, Anthropic, Stripe, and Airbnb didn't become what they are without early turbulence. 
+      Early-stage companies pivot, over-hire, restructure — that's the nature of the stage. 
+      My track record is stepping into those situations, building the talent function, and leaving it stronger than I found it. 
+      The through-line isn't tenure — it's what got built.
+    </p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+      <span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;">Evidence:</span>
+      <span style="font-size:11px;padding:4px 12px;background:var(--cream3);border-radius:2px;color:var(--ink);font-weight:500;">4 years at Cisco · Ranked #1 globally</span>
+      <span style="font-size:11px;padding:4px 12px;background:var(--cream3);border-radius:2px;color:var(--ink);font-weight:500;">Arrcus brought me back at Series D</span>
+      <span style="font-size:11px;padding:4px 12px;background:var(--cream3);border-radius:2px;color:var(--ink);font-weight:500;">Contractor → Full-time at CommScope</span>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT I DO -->
 <section class="roles-section" id="roles">
   <div class="section-label">What I do</div>
@@ -646,9 +671,13 @@ footer{
 <!-- SOURCING -->
 <section class="sourcing-section" id="sourcing">
   <div class="section-label">Sourcing depth</div>
-  <h2 class="section-heading reveal">Where I find candidates<br><em>others don't know exist.</em></h2>
+  <h2 class="section-heading reveal">Where I find candidates —<br><em>technical, GTM, or executive.</em></h2>
   <div class="sourcing-grid">
     <div class="sourcing-channels reveal" id="sourcingChannels">
+
+      <!-- TIER 1 LABEL -->
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold2);padding:12px 0 6px 20px;opacity:1;border-left:2px solid var(--gold2);margin-bottom:2px">Research & Technical</div>
+
       <div class="channel-item" data-pct="97">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
@@ -676,35 +705,68 @@ footer{
       <div class="channel-item" data-pct="83">
         <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
         <div class="channel-content">
-          <div class="channel-name">OpenReview · NeurIPS · ICML · ICLR</div>
-          <div class="channel-desc">Spotlight and oral paper authors = top 5% of submissions globally. Community-verified signal.</div>
-          <div class="channel-signal">→ Research Scientists · ML Engineers</div>
+          <div class="channel-name">OpenReview · NeurIPS · ICML · University Labs</div>
+          <div class="channel-desc">Conference paper authors, PhD pipelines, and postdoc talent at 30+ top engineering schools.</div>
+          <div class="channel-signal">→ Research Scientists · MS/PhD pipelines</div>
+        </div>
+      </div>
+
+      <!-- TIER 2 LABEL -->
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#2ECFA0;padding:14px 0 6px 20px;opacity:1;border-left:2px solid #2ECFA0;margin-bottom:2px">GTM · Business · G&A · Legal · HR</div>
+
+      <div class="channel-item" data-pct="88">
+        <div class="channel-bar-wrap"><div class="channel-bar-fill" style="background:linear-gradient(0deg,var(--teal2),#80DEEA)"></div></div>
+        <div class="channel-content">
+          <div class="channel-name">Blind · Teamblind · Levels.fyi</div>
+          <div class="channel-desc">Real-time candidate chatter, offer comparisons, and professionals actively evaluating moves — before they update LinkedIn.</div>
+          <div class="channel-signal">→ AE · SE · RevOps · CS · Finance</div>
+        </div>
+      </div>
+      <div class="channel-item" data-pct="82">
+        <div class="channel-bar-wrap"><div class="channel-bar-fill" style="background:linear-gradient(0deg,var(--teal2),#80DEEA)"></div></div>
+        <div class="channel-content">
+          <div class="channel-name">Revenue Collective · Sales Community Slacks</div>
+          <div class="channel-desc">Community-verified GTM professionals in revenue leadership, field sales, and pre-sales networks.</div>
+          <div class="channel-signal">→ VP Sales · CRO · SE · Channel · BD</div>
+        </div>
+      </div>
+      <div class="channel-item" data-pct="82">
+        <div class="channel-bar-wrap"><div class="channel-bar-fill" style="background:linear-gradient(0deg,var(--teal2),#80DEEA)"></div></div>
+        <div class="channel-content">
+          <div class="channel-name">G&A · Legal · HR · Finance · Operations</div>
+          <div class="channel-desc">CFO, General Counsel, CHRO, VP Ops, Controllers, and People leaders sourced through professional networks, alumni pools, and bar association directories.</div>
+          <div class="channel-signal">→ Legal · HR · Finance · Ops · People</div>
         </div>
       </div>
       <div class="channel-item" data-pct="78">
-        <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
+        <div class="channel-bar-wrap"><div class="channel-bar-fill" style="background:linear-gradient(0deg,var(--teal2),#80DEEA)"></div></div>
         <div class="channel-content">
-          <div class="channel-name">University Lab Pages · ORCID · ResearchGate</div>
-          <div class="channel-desc">PhD students and postdocs not on LinkedIn. Direct faculty relationships at 10+ universities.</div>
-          <div class="channel-signal">→ PhD pipelines · Research roles</div>
+          <div class="channel-name">Competitor Alumni Mapping · LinkedIn X-Ray</div>
+          <div class="channel-desc">Tracking talent movement out of target companies — who just left, who's at 18 months, who's ready to move.</div>
+          <div class="channel-signal">→ All GTM · G&A · Business functions</div>
         </div>
       </div>
-      <div class="channel-item" data-pct="73">
-        <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
+
+      <!-- TIER 3 LABEL -->
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#CE93D8;padding:14px 0 6px 20px;opacity:1;border-left:2px solid #CE93D8;margin-bottom:2px">Executive & Leadership</div>
+
+      <div class="channel-item" data-pct="90">
+        <div class="channel-bar-wrap"><div class="channel-bar-fill" style="background:linear-gradient(0deg,#9C6BC4,#CE93D8)"></div></div>
+        <div class="channel-content">
+          <div class="channel-name">Ghost Recruiting · Board & VC Networks</div>
+          <div class="channel-desc">Confidential outreach for C-suite roles. Leveraging investor and board relationships to access passive leaders who aren't on the market.</div>
+          <div class="channel-signal">→ CRO · CPO · CMO · CTO · CFO · COO · CBO</div>
+        </div>
+      </div>
+      <div class="channel-item" data-pct="83">
+        <div class="channel-bar-wrap"><div class="channel-bar-fill" style="background:linear-gradient(0deg,#9C6BC4,#CE93D8)"></div></div>
         <div class="channel-content">
           <div class="channel-name">X-Ray Boolean · Resume Mining · PDL API</div>
-          <div class="channel-desc">Google-crawling LinkedIn, GitHub, and university pages for profiles outside standard network reach.</div>
-          <div class="channel-signal">→ All technical roles · Passive candidates</div>
+          <div class="channel-desc">Cross-function deep search — works for a Staff ML Engineer, an Enterprise AE, or a CFO. The methodology scales across every role.</div>
+          <div class="channel-signal">→ All functions · All levels · Passive candidates</div>
         </div>
       </div>
-      <div class="channel-item" data-pct="67">
-        <div class="channel-bar-wrap"><div class="channel-bar-fill"></div></div>
-        <div class="channel-content">
-          <div class="channel-name">Kaggle · HuggingFace · Discord Communities</div>
-          <div class="channel-desc">Kaggle Grandmasters, HF model contributors, Eleuther/MLOps/LangChain community members.</div>
-          <div class="channel-signal">→ Applied ML · LLM engineers · MLOps</div>
-        </div>
-      </div>
+
     </div>
     <div class="network-viz reveal" style="height:580px;position:sticky;top:80px;">
       <canvas id="brainCv" style="width:100%;height:100%;border-radius:8px;background:#050d1a;display:block;"></canvas>
@@ -911,7 +973,7 @@ footer{
         <div class="timeline-co">CommScope → Vistance Networks</div>
         <div class="timeline-role">Contractor → Full-Time Senior Recruiter · Enterprise Networking & Cloud Infrastructure</div>
         <ul class="timeline-bullets">
-          <li>Joined as a contractor in Oct 2024; converted to full-time based on performance in Dec 2025 — sole recruiter navigating a multi-entity transition across CommScope and Vistance (Ruckus, Aurora)</li>
+          <li>Joined as a contractor in Oct 2024; converted to full-time based on performance in Dec 2025 — sole recruiter navigating a multi-entity transition across CommScope, Vistance (Ruckus, Aurora), and Amphenol</li>
           <li>100+ hires across engineering, GTM, and G&A; deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%</li>
           <li>Built SuccessFactors dashboards giving SVPs real-time visibility into funnel health and hiring velocity</li>
 
@@ -980,7 +1042,7 @@ footer{
         <div class="timeline-role">Senior Technical Recruiter · Data Platform & Distributed Systems</div>
         <ul class="timeline-bullets">
           <li>Sole recruiter — scaled 25 → 50 with weekly pipeline reviews with CEO, CTO, and Khosla Ventures</li>
-          <li>CEO departure triggered a strategic pivot and hiring pause; departed on strong terms and continued supporting Co-founder & CTO Vikram Joshi with warm referrals and sourcing guidance beyond the engagement.</li>
+          <li>CEO departure triggered a strategic pivot and the company eventually wound down; departed on strong terms and continue to support Co-founder & CTO Vikram Joshi with warm referrals and sourcing guidance to this day.</li>
         </ul>
       </div>
     </div>
@@ -1078,7 +1140,7 @@ footer{
 </footer>
 
 <script>
-const WORKER_URL = 'YOUR_WORKER_URL_HERE';
+const WORKER_URL = 'https://lingering-hall-a0ae.marvelchandra2019.workers.dev';
 
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');

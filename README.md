@@ -19,7 +19,7 @@ What you'll find here: sourcing frameworks, hiring playbooks, market intelligenc
 
 ## What I Do
 
-I operate across four modes depending on what a company needs:
+I operate across six modes depending on what a company needs:
 
 | Role Type | What it means | Where I've done it |
 |---|---|---|
@@ -27,6 +27,8 @@ I operate across four modes depending on what a company needs:
 | **Founding Recruiter** | First in-house hire — builds function from zero | Arrcus, Factory portfolio, Astera Labs, StormX, confidential seed-stage startups |
 | **Head of Talent / TA Lead** | Recruiting strategy, team leadership, stakeholder alignment | Cisco, Arrcus (Series D), Factory VC |
 | **GTM & G&A Recruiter** | Sales, SE, marketing, CS, ops, finance, legal | All of the above — cross-functional every time |
+| **Executive Search** | Ghost recruiting for CRO, CPO, CMO, CTO, CFO, COO, CBO | Xcalar, Arrcus, Factory VC, Independent |
+| **Fractional TA Operator** | Full 360 desk — Recruiting, BD, HR, and Ops | Independent 2023–2024 |
 
 ---
 
@@ -169,7 +171,7 @@ This came out of a real frustration — most JD feedback is subjective. I wanted
 ## Selected Experience
 
 **CommScope → Vistance Networks** *(Oct 2024 – Present)*  
-100+ hires in 12 months as sole recruiter across a 4-company acquisition (CommScope, Ruckus, Aurora, Amphenol). Engineering, GTM, and G&A. Deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%.
+100+ hires in 12 months as sole recruiter navigating a multi-entity transition across CommScope and Vistance (Ruckus, Aurora). Engineering, GTM, and G&A. Deployed AI recruiting stack — pipeline +35%, response rates +25%, scheduling efficiency +75–90%.
 
 **Independent — Seed to Pre-IPO** *(May 2023 – Oct 2024)*  
 Founding recruiter across Astera Labs (Semiconductor/Pre-IPO), StormX (Crypto/FinTech), AptonShops (E-commerce). Built 0→1 recruiting infrastructure for each. Closed ASIC, PCIe/CXL, AI/ML, Full-Stack, and GTM roles across US, Canada, India, EMEA.

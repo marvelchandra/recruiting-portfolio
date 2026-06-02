@@ -1,0 +1,186 @@
+# 🔍 AI/ML Sourcing Kit
+
+> Built by a founding recruiter with 15+ years sourcing AI/ML, Semiconductor, and Deep Tech talent — including Staff ML Engineers, Research Scientists, Compiler Engineers, and ASIC designers.
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-marvelchandra-008080?style=flat-square)](https://marvelchandra.github.io/recruiting-portfolio)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-chandrabuduri-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/chandrabuduri)
+
+---
+
+## What's Inside
+
+This kit covers **where to find** passive AI/ML talent that doesn't show up in LinkedIn searches — and **how to engage** them before they're on the market.
+
+| Module | What It Covers |
+|---|---|
+| [ArXiv Mining](#arxiv-mining) | Finding researchers by paper authorship |
+| [GitHub API Sourcing](#github-api-sourcing) | OSS contributor mining for ML Infra engineers |
+| [IEEE & Patent Search](#ieee--patent-search) | Semiconductor & hardware engineers |
+| [Conference Pipelines](#conference-pipelines) | NeurIPS, ICML, ICLR, MLSys author sourcing |
+| [University Lab Pipelines](#university-lab-pipelines) | MS/PhD sourcing at top engineering schools |
+| [Outreach Templates](#outreach-templates) | Messages that actually get responses |
+
+---
+
+## ArXiv Mining
+
+ArXiv lists every paper author by name — and many link directly to their institution page, LinkedIn, or personal site.
+
+**How to use it:**
+
+1. Go to [arxiv.org](https://arxiv.org) → search by topic (e.g. `LLM inference`, `RLHF`, `transformer efficiency`)
+2. Filter by date — last 6–12 months for active researchers
+3. Click author names → follow co-author networks
+4. Cross-reference on Google: `"First Last" site:linkedin.com`
+
+**High-signal topics to search:**
+- `vLLM`, `Flash Attention`, `LoRA`, `quantization`, `speculative decoding`
+- `RLHF`, `Constitutional AI`, `reward modeling`
+- `MLSys`, `model serving`, `inference optimization`
+- `ASIC`, `neural network accelerator`, `silicon photonics`
+
+**Tools:** [Semantic Scholar](https://www.semanticscholar.org) · [Papers With Code](https://paperswithcode.com) · [Connected Papers](https://www.connectedpapers.com)
+
+---
+
+## GitHub API Sourcing
+
+Engineers who contribute to major ML frameworks are often 6–18 months ahead of the LinkedIn market.
+
+**Key repos to mine:**
+```
+pytorch/pytorch
+huggingface/transformers
+vllm-project/vllm
+microsoft/DeepSpeed
+openai/triton
+google/jax
+NVIDIA/Megatron-LM
+```
+
+**What to look for:**
+- Contributors with 5+ merged PRs in the last year
+- Authors of performance-critical commits (CUDA kernels, memory optimization, batching)
+- People who open issues that get resolved — shows deep product understanding
+
+**Quick search formula:**
+```
+site:github.com "[role keyword]" "commits" location:"San Francisco" OR "Seattle" OR "New York"
+```
+
+**GitHub X-Ray Boolean:**
+```
+site:github.com/[repo]/commits?author= "ML" OR "inference" OR "training"
+```
+
+---
+
+## IEEE & Patent Search
+
+Patent inventors are **named and searchable** — this is how you find ASIC, SoC, and PCIe engineers who never update LinkedIn.
+
+**USPTO Patent Search:**
+1. Go to [patents.google.com](https://patents.google.com)
+2. Search: `(PCIe OR CXL OR HBM OR "neural network accelerator") assignee:(company name)`
+3. Click inventor names → Google them → find LinkedIn
+
+**IEEE Xplore:**
+1. Go to [ieeexplore.ieee.org](https://ieeexplore.ieee.org)
+2. Search by topic + filter by affiliation (company name)
+3. Author profiles often include institutional email → find on LinkedIn
+
+**Best for:**
+- ASIC / FPGA designers
+- PCIe / CXL / HBM architects
+- Silicon photonics engineers
+- RF / mixed-signal IC designers
+
+---
+
+## Conference Pipelines
+
+Conference paper authors are the top 5% of their field — and most aren't actively job hunting.
+
+**Top conferences by discipline:**
+
+| Discipline | Conferences |
+|---|---|
+| ML Research | NeurIPS, ICML, ICLR, CVPR, ACL |
+| ML Systems | MLSys, OSDI, SOSP, EuroSys |
+| Hardware / Architecture | ISCA, MICRO, HPCA, DAC |
+| Networking | SIGCOMM, NSDI, IMC |
+
+**Sourcing process:**
+1. Download the proceedings PDF or browse the program page
+2. Filter authors by target company affiliation
+3. Find them on LinkedIn using: `"First Last" "[University/Company]" site:linkedin.com`
+4. Check if they have a personal site (usually linked from the paper)
+
+---
+
+## University Lab Pipelines
+
+Built MS/PhD pipelines at **Stanford, MIT, Berkeley, CMU, Cornell, Caltech, Georgia Tech**, and 20+ other top engineering schools.
+
+**How to map a lab:**
+1. Find the professor's lab page (Google: `[Professor Name] lab [university]`)
+2. Check the "People" or "Students" page — PhD students are listed by name
+3. Filter for 4th/5th year students (graduating soon)
+4. Many list LinkedIn or personal sites directly
+
+**High-signal labs by discipline:**
+- **ML/AI:** Stanford HAI, Berkeley BAIR, CMU LTI, MIT CSAIL, Cornell Tech
+- **Systems:** Berkeley RISE, CMU PDL, MIT PDOS
+- **Semiconductor:** Stanford VLSI, MIT MTL, Georgia Tech ECE
+
+**Outreach tip:** Reference their specific research — not just "I saw you work on ML." Name the paper. It converts 3x better.
+
+---
+
+## Outreach Templates
+
+### Research Scientist / ML Engineer
+```
+Subject: [Paper title] — role at [Company]
+
+Hi [Name],
+
+I read your paper on [specific topic] — the approach to [specific finding] was genuinely interesting, especially in the context of [why it matters to the role].
+
+We're building [brief description] at [Company] and have a [Role] opening that maps closely to what you've been working on. This is a [stage] company with [notable signal — funding, team, mission].
+
+Worth a 20-minute conversation?
+
+— Chandra
+```
+
+### ASIC / Hardware Engineer (via patent)
+```
+Subject: Your work on [patent topic] — [Company] hardware role
+
+Hi [Name],
+
+I came across your patent on [topic] while researching engineers working on [area]. The [specific aspect] caught my attention — it's directly relevant to what our hardware team is building.
+
+We're at [stage] and hiring a [Role]. The team includes [notable signal].
+
+Open to a quick conversation?
+
+— Chandra
+```
+
+---
+
+## Who This Is For
+
+- **Technical recruiters** sourcing AI/ML, semiconductor, or deep tech talent
+- **Founding recruiters** building pipelines from zero at Series A–C startups
+- **TA leads** training their teams on passive sourcing beyond LinkedIn
+
+---
+
+## About
+
+Built by **Chandra Buduri** — 15+ years in Talent Acquisition, ranked #1 globally at Cisco (2017), founding recruiter at 5+ startups including Arrcus, Astera Labs, and Factory VC portfolio companies.
+
+🌐 [Portfolio](https://marvelchandra.github.io/recruiting-portfolio) · 💼 [LinkedIn](https://linkedin.com/in/chandrabuduri)

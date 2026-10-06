@@ -1,6 +1,6 @@
 # 🔎 Boolean String Library
 
-> A curated library of X-Ray and Boolean search strings for sourcing technical, GTM, executive, and G&A talent — built and battle-tested across 600+ hires at Cisco, Arrcus, Astera Labs, and Factory VC portfolio companies.
+> A curated library of X-Ray and Boolean search strings for sourcing technical, GTM, executive, and G&A talent — built and battle-tested across 1000+ hires at Cisco, Arrcus, Astera Labs, and Factory VC portfolio companies.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-marvelchandra-008080?style=flat-square)](https://marvelchandra.github.io/recruiting-portfolio)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-chandrabuduri-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/chandrabuduri)

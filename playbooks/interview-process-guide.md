@@ -1,7 +1,7 @@
 # 🎯 The Interview Process Guide
 ### *A Practitioner's Playbook — Built in the Trenches, Not in a Boardroom*
 
-> **By Chandra Buduri** · 10+ years · 600+ hires · Cisco, Arrcus, Factory VC, Astera Labs  
+> **By Chandra Buduri** · 10+ years · 1000+ hires · Cisco, Arrcus, Factory VC, Astera Labs  
 > *Not theory. Not frameworks from a slide deck. What actually works.*
 
 ---

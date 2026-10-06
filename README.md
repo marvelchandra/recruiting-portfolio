@@ -37,7 +37,7 @@ I operate across six modes depending on what a company needs:
 | | |
 |---|---|
 | **Founding / Head of TA roles** | 5+ |
-| **Total hires closed** | 600+ |
+| **Total hires closed** | 1000+ |
 | **Avg time-to-hire reduction** | ~40% |
 | **Companies scaled** | 15+ |
 | **Countries hired across** | 10+ |
@@ -182,8 +182,8 @@ Head of TA embedded across 10+ portfolio companies (Modular, Atomic AI, Artera A
 **Arrcus — Series B through D** *(Mar 2020 – May 2023)*  
 First in-house recruiter → Head of TA. Scaled 50 → 130. Closed 9 Director+ global leaders. Built recruiting function from scratch through three funding rounds. Cross-functional hiring: Engineering, Product, GTM, Operations, G&A.
 
-**Cisco Systems** *(Mar 2015 – Jun 2019)*  
-600+ hires over 4 years across Engineering, GTM, and G&A. Reduced time-to-fill 90 → 30 days. Ranked #1 globally in 2017 out of 300+ recruiters worldwide. Promoted to TA Lead managing a team of 6.
+**Cisco Systems** *(2010 – Jun 2019)*  
+1000+ hires over 8 years across Engineering, GTM, and G&A. Reduced time-to-fill 90 → 30 days. Ranked #1 globally in 2017 out of 300+ recruiters worldwide. Promoted to TA Lead managing a team of 6.
 
 ---
 

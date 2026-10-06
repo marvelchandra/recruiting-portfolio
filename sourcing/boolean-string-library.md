@@ -250,6 +250,6 @@ Found a string that works well? Open a PR or issue. I'll review and add it with 
 
 ## About
 
-Built by **Chandra Buduri** — 15+ years in Talent Acquisition, ranked #1 globally at Cisco (2017) out of 300+ recruiters, founding recruiter at 5+ deep tech startups.
+Built by **Chandra Buduri** — 10+ years in Talent Acquisition, ranked #1 globally at Cisco (2017) out of 300+ recruiters, founding recruiter at 5+ deep tech startups.
 
 🌐 [Portfolio](https://marvelchandra.github.io/recruiting-portfolio) · 💼 [LinkedIn](https://linkedin.com/in/chandrabuduri)

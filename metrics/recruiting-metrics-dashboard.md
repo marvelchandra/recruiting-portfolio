@@ -223,6 +223,6 @@ Q[n+1] PLAN
 
 ## About
 
-Built by **Chandra Buduri** — Head of TA at Arrcus Series D and Factory VC, where weekly KPI dashboards went directly to the CEO. 15+ years in Talent Acquisition, 1000+ hires closed.
+Built by **Chandra Buduri** — Head of TA at Arrcus Series D and Factory VC, where weekly KPI dashboards went directly to the CEO. 10+ years in Talent Acquisition, 1000+ hires closed.
 
 🌐 [Portfolio](https://marvelchandra.github.io/recruiting-portfolio) · 💼 [LinkedIn](https://linkedin.com/in/chandrabuduri)
